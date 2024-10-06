@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body align="center">
+
+    <!-- login without alignment  -->
+    <form action="lhome.html">
+        <fieldset style="width: 50%;">
+            <legend>Login page</legend>
+            <label for="username"> enter the username :</label>
+            <input type="text" name="username" id="username" placeholder="username" required>
+            <br><br>
+            <label for="password">password :</label>
+            <input type="password" name="password" id="password" placeholder="password" required>
+            <br><br>
+            <input type="submit" name="submit" value="Login">
+            <input type="reset" value="cancel">
+            <br><br>
+            <label for="">Forgot password ?</label><a href="#" target="_self">click here</a>
+        </fieldset>
+    </form>
+
+    <!-- login with alignment using tables  -->
+     <h1>login with alignment using tables</h1>
+     <form action="lhome.html">
+        <fieldset style="width: 50%;">
+            <legend>Login page</legend>
+            <table>
+                <tr>
+                    <td><label for="username"> enter the username :</label></td>
+                    <td><input type="text" name="username" id="username" placeholder="username" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">password :</label></td>
+                    <td><input type="password" name="password" id="password" placeholder="password" required></td>
+
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="pass"><label for="pass">Show password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="Login"></td>
+                    <td><input type="reset" value="cancel"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Forgot password ?</label><a href="#" target="_self">click here</a></td>
+                </tr>
+            </table>
+        </fieldset>
+     </form>
+
+
+    
+</body>
+</html>

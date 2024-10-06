@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table HTML</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"> HTML TABLE FOR WEB CLASS </h1>
+    <table border="1" style="border-collapse: collapse; text-align: center; height: 350px; width: 75%;" align="center"
+        bgcolor="magenta">
+        <tr bgcolor="cyan" style="color: rgb(250, 19, 19);">
+            <th>SI.NO</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>PHONE NO</th>
+            <th>PROFIE PICTURE</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>DINESH M</td>
+            <td>21</td>
+            <td>MALE</td>
+            <td>9789453361</td>
+            <td><img src="../images/DINESH 6763H.jpg" width="75px" height="75px" alt="network issue"></td>
+
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DHINESH R</td>
+            <td>21</td>
+            <td> MALE</td>
+            <td>9566817853</td>
+            <td><a href="../images/iyer.jpeg" target="_blank" rel="noopener noreferrer"><img src="../images/iyer.jpeg" width="75px" height="75px" alt="network issue"></a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>RAM</td>
+            <td>21</td>
+            <td>MALE</td>
+            <td>8925132028</td>
+            <td><a href="../images/Ram.jpeg" target="_blank" rel="noopener noreferrer"><img src="../images/Ram.jpeg" width="75px" height="75px" alt="network issue"></a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>TANUSH</td>
+            <td style="color:rgba(0, 0, 0)">21</td>
+            <td>MALE</td>
+            <td>9345791176</td>
+            <td><a href="../images/tanush.jpeg" target="_blank" rel="noopener noreferrer"><img src="../images/tanush.jpeg" width="75px" height="75px" alt="network issue"></a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUMA</td>
+            <td>21</td>
+            <td>FEMALE</td>
+            <td>8088595261</td>
+            <td><a href="../images/suma.jpeg" target="_blank" rel="noopener noreferrer"><img src="../images/suma.jpeg" width="75px" height="75px" alt="network issue"></a></td>
+        </tr>
+    </table>
+    <br>
+    <hr color="brown" style="height: 5px;">
+    <h1>Table merge ROW - ROWSPAN </h1>
+    <!-- short cut key to write table  -->
+    <!-- table>(tr>td*6)*5 -->
+
+    <table border="1" style="border-collapse: collapse; text-align: center; height: 350px; width: 75%;" align="center"
+        bgcolor="magenta">
+        <tr bgcolor="cyan" style="color: rgb(250, 19, 19);">
+            <th>SI.NO</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>PHONE NO</th>
+            <th>PROFIE PICTURE</th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DHINESH R</td>
+            <td>21</td>
+            <td rowspan="2" bgcolor="white"> MALE</td>
+            <td style="color:rgb(4, 53, 65)">9566817853</td>
+            <td><img src="https://www.w3schools.com/howto/img_avatar.png" width="75px" height="75px"
+                    alt="network issue"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>TANUSH</td>
+            <td style="color:rgba(0, 0, 0)">21</td>
+            <!-- <td>MALE</td> -->
+            <td>9345791176</td>
+            <td><img src="https://www.w3schools.com/howto/img_avatar.png" width="75px" height="75px"
+                    alt="network issue"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUMA</td>
+            <td>21</td>
+            <td>FEMALE</td>
+            <td>8088595261</td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2F3us44Sf-XobKjmnDTlK06IswKHjZaGx19V5okrs-PRtN9FF-3rAREBrkx8hph9xcyI&usqp=CAU"
+                    width="75px" height="75px" alt="network issue"></td>
+        </tr>
+
+    </table>
+    <!-- column merge -->
+    <hr style="height: 5px;" color="brown">
+    <h1>Table merge COLUMN-colspan</h1>
+    <table border="1" style="border-collapse: collapse; height: 250px; width: 75%;text-align: center;" bgcolor="magenta"
+        align="center">
+        <tr style="color: rgb(250, 19, 19); background-color: aqua;">
+            <th>NAME</th>
+            <th colspan="2" style="background-color: aliceblue;">ADRESS</th>
+            <!-- <th>PINCODE</th> -->
+        </tr>
+        <tr>
+            <td>DINESH</td>
+            <td>OOTY</td>
+            <td>643104</td>
+        </tr>
+        <tr>
+            <td>SUGANTHI</td>
+            <td>OOTY</td>
+            <td>643104</td>
+        </tr>
+    </table>
+    <!-- TABLE TEXT AND IMAGE HAS HYPER LINKS -->
+    <hr style="height: 5px;" color="brown">
+    <h1>TABLE TEXT AND IMAGE HAS HYPER LINKS</h1>
+    <table border="1" style="border-collapse: collapse; text-align: center; height: 350px; width: 75%;" align="center"
+        bgcolor="magenta">
+        <tr bgcolor="cyan" style="color: rgb(250, 19, 19);">
+            <th>SI.NO</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>PHONE NO</th>
+            <th>PROFIE PICTURE</th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.babynamestamil.com/tamil-name-meaning/dinesh/name01673" target="_blank">DINESH
+                    M</a></td>
+            <td>21</td>
+            <td> MALE</td>
+            <td style="color:rgb(4, 53, 65)">9566817853</td>
+            <td><img src="https://www.w3schools.com/howto/img_avatar.png" width="75px" height="75px"
+                    alt="network issue"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>TANUSH</td>
+            <td style="color:rgba(0, 0, 0)">21</td>
+            <td>MALE</td>
+            <td>9345791176</td>
+            <td><img src="https://www.w3schools.com/howto/img_avatar.png" width="75px" height="75px"
+                    alt="network issue"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUMA</td>
+            <td>21</td>
+            <td>FEMALE</td>
+            <td>8088595261</td>
+            <td><a href="https://www.timesnownews.com/baby-names/meaning-of-suma#:~:text=%3A-,Suma,Gender"
+                    target="_blank" rel="noopener noreferrer"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2F3us44Sf-XobKjmnDTlK06IswKHjZaGx19V5okrs-PRtN9FF-3rAREBrkx8hph9xcyI&usqp=CAU"
+                        width="75px" height="75px" alt="network issue"></a></td>
+        </tr>
+    </table>
+    <!-- to use an unused space by table  -->
+    <hr style="height: 5px;" color="brown">
+    <h1>To use an unused space by table</h1>
+    <table border="1" style="border-collapse: collapse; width: 75%; height: 350px; text-align: center; float: right;">
+        <tr>
+            <td>SI.No</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Dinesh M</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dhinesh R</td>
+        </tr>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At culpa fuga repellat expedita. Explicabo, quis illum, est non nesciunt maxime enim reprehenderit tempore consequatur omnis recusandae voluptate repudiandae et a!</p>
+    <br>
+    
+    <hr style="height: 5px;" color="brown">
+    
+</body>
+
+</html>
