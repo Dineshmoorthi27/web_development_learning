@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task16_grid_home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 100px auto auto 100px;
+            grid-template-columns: 250px auto auto auto;
+            grid-template-areas: "nav nav nav nav"
+                " aside content content content"
+                "aside content content content"
+                "aside footer footer footer";
+        }
+
+        .section {
+            width: 100%;
+            height: 100%;
+            place-items: center;
+            row-gap: 10px;
+            column-gap: 10px;
+            box-shadow: 0px 0px 3px 3px lightgray;
+            place-items: center;
+        }
+
+        nav {
+            background-color: rgb(255, 220, 182);
+            grid-area: nav;
+            position: sticky;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        nav a,
+        aside a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: black;
+            font-size: 1rem;
+        }
+
+        nav a:hover , aside a:hover{
+            text-decoration: underline;
+            transform: scale(1.5);
+            transition: all .3s linear;
+        }
+
+        aside {
+            grid-area: aside;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: rgb(249, 234, 229);
+        }
+
+        article {
+            grid-area: content;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 25px;
+            background-color: lightcyan;
+
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            gap:30px;
+        }
+
+        .content-section img {
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        .content-text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: justify;
+        }
+        .content-text h2{
+            margin-bottom: 50px;
+            font-size: 3rem;
+        }
+        .content-text p{
+            font-weight: 300;
+        }
+
+        footer {
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(209, 246, 197);
+        }
+
+        footer img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav class="section">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </nav>
+        <aside class="section">
+            <a href="#">BMW</a>
+            <a href="#">lamborghini</a>
+            <a href="#">Audi</a>
+            <a href="#">Toyata</a>
+            <a href="#">Doge challenger SRT</a>
+            <a href="#">mercedes-benz</a>
+        </aside>
+        <article class="section">
+            <div class="content-section">
+                <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 1">
+                <div class="content-text">
+                    <h2>BMW</h2>
+                    <p>BMW is distinguished by its commitment to delivering the <mark>&quot; Ultimate Driving Machine &quot; </mark>, combining performance, luxury, and advanced technology. Known for their precise handling and powerful engines, BMW vehicles offer an engaging driving experience. The brand integrates innovative features like the iDrive infotainment system and advanced driver assistance technologies. With a focus on elegant design and high-quality interiors, BMW balances sporty dynamics with comfort and sophistication, making it a leader in the premium automotive segment.</p>
+                </div>
+            </div>
+            <div class="content-section">
+                <div class="content-text">
+                    <h2>Lamborghini</h2>
+                    <p>Lamborghini is renowned for its bold, exotic design and uncompromising performance. Known for producing some of the fastest and most luxurious supercars in the world, Lamborghini vehicles feature aggressive styling, cutting-edge aerodynamics, and powerful engines, often V10 or V12. The brand is synonymous with Italian craftsmanship, delivering a visceral driving experience with a focus on speed, precision, and exclusivity. Each Lamborghini is a statement of innovation and luxury, embodying the spirit of high-performance automotive engineering.
+                    </p>
+                </div>
+                <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1690010999692/front-left-side-47.jpg"
+                    alt="Image 1">
+            </div>
+            <div class="content-section">
+                <img src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 1">
+                <div class="content-text">
+                    <h2>Doge challenger SRT</h2>
+                    <p>The Dodge Challenger SRT is known for its retro-inspired muscle car design, powerful V8 engines, and high-performance capabilities. It's celebrated for its raw horsepower, with models like the Hellcat and Demon offering extreme speed and acceleration. The Challenger SRT combines aggressive styling with advanced performance features, making it a top choice for enthusiasts who crave both nostalgia and modern power. Its iconic presence on the road is a testament to American muscle car heritage.</p>
+                </div>
+            </div>
+            <div class="content-section">
+                <div class="content-text">
+                    <h2>Mercedes-benz</h2>
+                    <p>Mercedes-Benz stands out for its luxury, engineering excellence, and innovation in automotive technology. The brand is known for its elegant design, high-performance engines, and advanced safety features. Mercedes-Benz offers a range of vehicles that combine comfort with cutting-edge technology, such as the MBUX infotainment system. Their legacy of craftsmanship and commitment to innovation make them a symbol of prestige and quality in the automotive world.</p>
+                </div>
+                <img src="https://di-uploads-pod6.dealerinspire.com/raycatenaofunion/uploads/2019/01/2018-CLA-CLA45-AMG-MODEL-jan-2019.jpg"
+                    alt="Image 1">
+            </div>
+            <div class="content-section">
+                <img src="https://www.audi.in/content/dam/nemo/misc/stories-of-progress/articles/2023/238_progress-shaped-by-the-rhombus/1920x1152-desktop-40-jahre-audi-sport-23823B07.jpg"
+                    alt="Image 1">
+                <div class="content-text">
+                    <h2>Audi</h2>
+                    <p> Audi cars are unique due to their sleek, modern design, advanced Quattro all-wheel-drive system, and cutting-edge technology. They offer a blend of luxury and performance, featuring high-quality interiors with innovative infotainment systems. Audi's commitment to precision engineering and a smooth driving experience also sets them apart in the automotive industry.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <footer class="section">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="Logo 1">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Logo 2">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384063.png" alt="Logo 3">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="Logo 4">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png" alt="Logo 5">
+            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111710.png" alt="Logo 6">
+            <img src="https://cdn-icons-png.flaticon.com/128/11516/11516211.png" alt="Logo 7">
+        </footer>
+    </div>
+
+</body>
+
+</html>

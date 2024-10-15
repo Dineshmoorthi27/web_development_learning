@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Details </title>
+</head>
+
+<body style="background-color: rgb(227, 242, 174);">
+    <h1 align="center"><em>STUDENT DETAILS</em></h1>
+    <form action="student_login.html">
+        <fieldset style="background-color: rgb(250, 211, 166);">
+            <legend><b><em>STUDENT DETAILS</em></b></legend>
+            <!-- personal information are present below -->
+            <fieldset style="background-color: rgb(226, 182, 204);">
+                <legend><b><em>Personal info</em></b></legend>
+                <table cellpadding="10" cellspacing="10">
+                    <tr>
+                        <td><label for="fname">First Name :</label></td>
+                        <td><input type="text" name="fname" id="fname" placeholder="Dinesh M"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">username :</label></td>
+                        <td><input type="text" name="username" id="username" placeholder="dineshmoorthi27"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Father">Father :</label></td>
+                        <td><input type="text" name="fathername" id="Father" placeholder="Moorthi G"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Mother">Mother :</label></td>
+                        <td><input type="text" name="mothername" id="Mother" placeholder="Vasanthi M"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="DOB">DOB :</label></td>
+                        <td><input type="date" name="DOB" id="DOB"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Gender">Gender :</label></td>
+                        <td><input type="radio" name="gender" id="g1" value="male"><label for="g1">Male</label>
+                            <input type="radio" name="gender" id="g2" value="Female"><label for="g2">Female</label>
+                            <input type="radio" name="gender" id="g3" value="Other"><label for="g3">Other</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <!-- contact details are below -->
+            <fieldset style="background-color: rgb(200, 236, 248);">
+                <legend><b><em>Contact</em></b></legend>
+                <table cellpadding="10" cellspacing="10">
+                    <tr>
+                        <td><label for="Mobile">Mobile :</label></td>
+                        <td><input type="tel" name="phone" id="Mobile" placeholder="9789453361"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">Email :</label></td>
+                        <td><input type="email" name="email" id="Email" placeholder="dineshmoorthi27@gmail.com"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Address1">Address :</label></td>
+                        <td><input type="text" name="Address" id="Address1" placeholder="Door.No"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="Address" id="Address2" placeholder="street name"></td>
+                        <td><input type="text" name="Address" id="Address3" placeholder="near by landmark"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="Address4" id="" cols="70" rows="3" placeholder="Full Address"
+                                style="resize: none;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td><select name="country" id="country">
+                                <option value="" hidden>--Choose here--</option>
+                                <option value="India">India</option>
+                                <option value="">China</option>
+                                <option value="">USA</option>
+                                <option value="">Spain</option>
+                                <option value="">Germany</option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State</label></td>
+                        <td><select name="state" id="state">
+                                <option value="" hidden>--Choose here--</option>
+                                <option value="">Tamil Nadu</option>
+                                <option value="">kerala</option>
+                                <option value="">Andhra</option>
+                                <option value="">Karanataka</option>
+                                <option value="">UP</option>
+                                <option value="">Delhi</option>
+                                <option value="">jammu and kashmir</option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td><label for="district">District</label></td>
+                        <td><select name="district" id="district">
+                                <option value="" hidden>--Choose here--</option>
+                                <option value="">Coimbator</option>
+                                <option value="">The Nilgiris</option>
+                                <option value="">Chennai</option>
+                                <option value="">Vellore</option>
+                                <option value="">Erode</option>
+                                <option value="">Salem</option>
+                                <option value="">Dharmapuri</option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td><label for="Pincode">Pincode</label></td>
+                        <td><input type="number" name="" id="Pincode" placeholder="643 104"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset style="background-color: rgb(244, 210, 246);">
+                <legend><b><em>Education</em></b></legend>
+                <table cellpadding="10" cellspacing="10">
+                    <tr>
+                        <td><label for="Degree">Degree :</label></td>
+                        <td><input type="text" id="Degree" placeholder="Bachelor of Technology"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Stream">Stream :</label></td>
+                        <td><input type="radio" name="Stream" id="s1" value=""><label for="s1">IT</label>
+                            <input type="radio" name="Stream" id="s2" value=""><label for="s2">CSE</label>
+                            <input type="radio" name="Stream" id="s3" value=""><label for="s3">ECE</label>
+                            <input type="radio" name="Stream" id="s4" value=""><label for="s4">EEE</label><br>
+                            <input type="radio" name="Stream" id="s5" value=""><label for="s5">Mech</label>
+                            <input type="radio" name="Stream" id="s6" value=""><label for="s6">Civil</label>
+                            <input type="radio" name="Stream" id="s7" value=""><label for="s7">Others</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Percentage">Percentage :</label></td>
+                        <td><input type="number" name="" id="Percentage" placeholder="80.00">
+                    </tr>
+                    <tr>
+                        <td><label for="Year">Year of Passing :</label></td>
+                        <td><select name="" id="Year">
+                                <option value="" hidden>--Choose here--</option>
+                                <option value="">2027</option>
+                                <option value="">2026</option>
+                                <option value="">2025</option>
+                                <option value="">2024</option>
+                                <option value="">2023</option>
+                                <option value="">2022</option>
+                                <option value="">2021</option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td><label for="clg">College Name :</label></td>
+
+                        <td>
+
+                            <input type="text" name="" id="clg"
+                                placeholder="Sri Ramakrishna Institue of Technology Coimbator">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Skills">Skills :</label></td>
+                        <td>
+
+                            <input type="checkbox" name="" id="py"><label for="py">Python</label>
+                            <input type="checkbox" name="" id="ja"><label for="ja">Java</label>
+                            <input type="checkbox" name="" id="c"><label for="c">C</label>
+                            <input type="checkbox" name="" id="cpp"><label for="cpp">C++</label><br><br>
+                            <input type="checkbox" name="" id="web"><label for="web">HTML</label>
+                            <input type="checkbox" name="" id="w1"><label for="w1">CSS</label>
+                            <input type="checkbox" name="" id="w2"><label for="w2">Javascript</label>
+                            <input type="checkbox" name="" id="w3"><label for="w3">React Js</label><br><br>
+                            <input type="checkbox" name="" id="SQL"><label for="SQL">SQL</label>
+                            <input type="checkbox" name="" id="DJ"><label for="DJ">Django</label>
+                            <input type="checkbox" name="" id="os"><label for="os">OS</label>
+                            <input type="checkbox" name="" id="network"><label for="network">Network</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset style="background-color: rgb(213, 216, 212);">
+                <legend><b><em>Placement</em></b></legend>
+                <table cellpadding="10" cellspacing="10">
+                    <tr>
+                        <td><label for=" Des">Desgination :</label></td>
+                        <td><input type="radio" name="des" id="Developer" value="">
+                            <labelfor="Developer">Developer</label>
+                                <input type="radio" name="des" id="Tester" value=""><label for="Tester">Tester</label>
+                                <input type="radio" name="des" id="Devops" value=""><label for="Devops">Devops</label>
+                                <input type="radio" name="des" id="Tech" value=""><label for="Tech">Tech
+                                    Support</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="loc">Prefered location :</label></td>
+                        <td>
+                            <input type="checkbox" name="" id="a"><label for="a">Bangalore</label>
+                            <input type="checkbox" name="" id="b"><label for="b">Coimbatore</label>
+                            <input type="checkbox" name="" id="ch"><label for="ch">Chennai</label>
+                            <input type="checkbox" name="" id="d"><label for="d">Hyberbad</label><br>
+                            <input type="checkbox" name="" id="e"><label for="e">Madurai</label>
+                            <input type="checkbox" name="" id="f"><label for="f">Others</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="exp">Expected Package :</label></td>
+                        <td><input type="radio" name="sal" id="sal1" value=""><label for="sal1">&lt; 3 LPA</label>
+                            <input type="radio" name="sal" id="sal2" value=""><label for="sal2">3-6 LPA</label>
+                            <input type="radio" name="sal" id="sal3" value=""><label for="sal3">6-10 LPA</label>
+                            <input type="radio" name="sal" id="sal4" value=""><label for="sal4">&gt; 15 LPA</label>
+                            <input type="radio" name="sal" id="sal5" value=""><label for="sal5">No Expectation</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="upload">Upload Resume :</label></td>
+                        <td><input type="file" name="" id="file" value=""></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset style="background-color: rgb(163, 242, 180);">
+                <legend><b><em>Create Account</em></b></legend>
+                <table cellpadding="10" cellspacing="10">
+                    <tr>
+                        <td><label for="uname">Set UserName :</label></td>
+                        <td><input type="text" name="" id="uname" value="" placeholder="Dineshmoorthi27"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass1">Set Password :</label></td>
+                        <td><input type="password" name="" id="pass1" value="" placeholder="@8GE6!he#6"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass2">Confirm Password :</label></td>
+                        <td><input type="password" name="" id="pass2" value=""  placeholder="@8GE6!he#6"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <h3><input type="checkbox" id="term" required><label for="term">Agree terms &amp; conditions</label></h3>
+            <input type="submit" value="submit" style="width: 15%; background-color:rgb(68, 193, 99);">
+            <input type="reset" value="Reset" style="width: 15%; background-color: rgb(251, 77, 77);">
+        </fieldset>
+    </form>
+</body>
+
+</html>

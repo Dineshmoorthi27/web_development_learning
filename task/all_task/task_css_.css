@@ -1,0 +1,323 @@
+/* Global styles */
+body {
+    margin: 0;
+    animation: day 12s ease-in infinite;
+}
+
+/* Day to Night Background Animation */
+@keyframes day {
+    from {
+        background: rgb(244, 4, 4);
+        background: linear-gradient(40deg, rgba(244, 4, 4, 0.95) 1%, rgba(244, 169, 4, 0.97) 9%, rgba(241, 207, 6, 1) 43%, rgba(255, 179, 0, 0.99) 79%, rgba(255, 38, 0, 0.92) 98%);
+    }
+    to {
+        background: rgb(20, 15, 15);
+        background: linear-gradient(40deg, rgba(20, 15, 15, 0.95) 1%, rgba(85, 85, 82, 0.97) 25%, rgba(102, 102, 100, 1) 49%, rgba(116, 115, 115, 1) 70%, rgba(15, 15, 15, 0.92) 90%);
+    }
+}
+
+/* Main container */
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sun Animation */
+.sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fa0e0e;
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    box-shadow: 0px 0px 10px #f2f1ef;
+    opacity: 1;
+    animation: sun 12s ease-in-out infinite;
+}
+
+@keyframes sun {
+    to {
+        opacity: 0;
+    }
+}
+
+/* Moon Animation */
+.moon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 25px 10px 0 0 white;
+    position: absolute;
+    top: 20px;
+    left: 70rem;
+    animation: moon 12s ease-in-out 6s infinite;
+}
+
+@keyframes moon {
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* House 1 */
+.house1 {
+    width: 200px;
+    height: 239px;
+    background-color: rgb(227, 158, 241);
+    display: flex;
+    position: fixed;
+    top: 64px;
+    left: 357px;
+}
+
+.house1 .build1 {
+    width: 60px;
+    height: 114px;
+    background-color: aliceblue;
+    position: relative;
+    top: 123px;
+    left: 20px;
+}
+
+.house1 .build2 {
+    width: 100px;
+    height: 170px;
+    background-color: rgb(246, 246, 164);
+    position: relative;
+    top: 67px;
+    left: 20px;
+}
+
+/* House 2 */
+.house2 img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 130px;
+    left: 750px;
+}
+
+/* Tree Image */
+.tree img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 3rem;
+    left: 83.5rem;
+}
+
+/* White line above the road */
+.lin1 {
+    position: fixed;
+    top: 250px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Sidebar bars above the road */
+.main .sidebar1,
+.main .sidebar2 {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sidebar1 {
+    top: 255px;
+    height: 47px;
+}
+
+.sidebar2 {
+    top: 551px;
+    height: 60px;
+}
+
+.bars {
+    width: 10px;
+    height: 50px;
+    background-color: white;
+}
+
+/* Road */
+.road {
+    position: fixed;
+    top: 301px;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Car Animation */
+.car {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    top: -250px;
+    left: -28rem;
+    animation: car 10s ease-out infinite;
+}
+
+@keyframes car {
+    from {
+        left: -38rem;
+    }
+    to {
+        left: 80rem;
+    }
+}
+
+/* Car body */
+.car-body {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 21.5rem;
+    left: 0;
+    background-color: red;
+}
+
+/* Car lights and indicators */
+.fontlight,
+.fontindicator,
+.barkelight,
+.backindicator,
+.taillight {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    background-color: yellow;
+}
+
+.fontlight {
+    left: 30px;
+}
+
+.fontindicator {
+    left: 100px;
+}
+
+.barkelight {
+    right: 150px;
+}
+
+.backindicator {
+    right: 60px;
+}
+
+.taillight {
+    right: 30px;
+}
+
+/* Car top */
+.car-top {
+    width: 85%;
+    height: 120px;
+    position: absolute;
+    top: 20rem;
+    left: 35px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.car-top .left,
+.car-top .centre,
+.car-top .right {
+    width: 60px;
+    height: 50px;
+    background-color: gray;
+}
+
+.windowb,
+.windowc,
+.windowf {
+    width: 50px;
+    height: 20px;
+    background-color: #00FFFF;
+}
+
+/* Wheels */
+.wheel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 24rem;
+    left: 0;
+}
+
+.weelsf,
+.weelsb {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+
+.tiref,
+.tireb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.tirea {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/* Road markings */
+.bar {
+    width: 80px;
+    height: 15px;
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 190px;
+    background-color: rgb(75, 71, 71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* White line above the footer */
+.lin2 {
+    position: fixed;
+    top: 550px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Background images in the footer */
+.background-img img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 35px;
+    left: 80.5rem;
+}

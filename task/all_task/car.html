@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .car {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            background-color: transparent;
+            border: 5px whitesmoke solid;
+            position: absolute;
+            animation: mover 6s linear normal forwards;
+            
+        }
+
+        .car-top {
+            width: 500px;
+            height: 130px;
+            background-color: transparent;
+            position: absolute;
+            top: 135px;
+            left: 0px;
+        }
+
+        .car-top .left {
+            width: 36px;
+            height: 104px;
+            background-color: maroon;
+            border-radius: 5px;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: -2rem;
+            left: 93px;
+
+        }
+
+        .car-top .centre {
+            width: 9.8rem;
+            height: 80px;
+            background-color: maroon;
+            border-radius: 2px;
+            position: absolute;
+            top: 62px;
+            left: 134px;
+        }
+
+        .car-top .right {
+            width: 36px;
+            height: 104px;
+            background-color: maroon;
+            border-radius: 5px;
+            transform: rotate(-45deg);
+            position: absolute;
+            bottom: -2rem;
+            left: 295px;
+        }
+
+        
+        .car-top .windowc {
+            width: 13rem;
+            height: 54px;
+            background-color:maroon;
+            border-radius: 15px;
+            position: relative;
+            left:108px;
+            top: 80px;
+        }
+
+        .car .car-body {
+            width: 400px;
+            height: 90px;
+            background-color:maroon  ;
+            position: absolute;
+            top: 53%;
+            left: 1.2rem;
+            border-radius: 10px;
+        }
+        .car-body .fontlight{
+            width: 6px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: yellow;
+            position: absolute;
+            top: 23px;
+            left:24.7rem;
+        }
+        .car-body .fontindicator{
+            width: 6px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            top: 45px;
+            left:24.7rem;
+        }
+        .car-body .barkelight{
+            width: 6px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            top: 23px;
+            left:0rem;
+        }
+        .car-body .backindicator{
+            width: 6px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            top: 38px;
+            left:0rem;
+        }
+        .car-body .taillight{
+            width: 6px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 55px;
+            left:0rem;
+        }
+
+        .wheel {
+            width: 18.8rem;
+            height: 100px;
+            background-color: transparent;
+            position: absolute;
+            top: 313px;
+            left: 62px;
+        }
+
+        .wheel .weelsf {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 11px;
+            left: 245px;
+        }
+
+        .wheel .weelsb {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 11px;
+            left: 17px;
+        }
+
+        .wheel .tiref {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(142, 140, 139);
+            border: 5px rgb(53, 44, 44) solid;
+            outline: rgb(0, 0, 0) 2px solid;
+            outline-offset: -20px;
+            position: absolute;
+            top: 15px;
+            left: 250px;
+            animation: wheelanimation 2s linear infinite;
+        }
+        .tiref .tirea{
+            width: 25px;
+            height: 25px;
+            border: 2px rgb(0, 0, 0) solid;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .tireb .tirea{
+            width: 25px;
+            height: 25px;
+            border: 2px rgb(0, 0, 0) solid;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wheel .tireb {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(142, 140, 139);
+            border: 5px rgb(53, 44, 44) solid;
+            outline: rgb(0, 0, 0) 2px solid;
+            outline-offset: -20px;
+            position: absolute;
+            top: 15px;
+            left: 22px;
+            animation: wheelanimation 2s linear infinite;
+        }
+
+        @keyframes wheelanimation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes mover {
+            from{
+                top:0;
+                left:0;
+            }
+            to{
+                top:0;
+                left:1140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="car">
+        <div class="car-body">
+            <div class="fontlight"></div>
+            <div class="fontindicator"></div>
+            <div class="barkelight"></div>
+            <div class="backindicator"></div>
+            <div class="taillight"></div>
+        </div>
+
+        <div class="car-top">
+            <div class="left"></div>
+            <div class="centre"></div>
+            <div class="right"></div>
+            <div class="windowb"></div>
+            <div class="windowc"></div>
+            <div class="windowf"></div>
+        </div>
+        <div class="wheel">
+            <div class="weelsf"></div>
+            <div class="weelsb"></div>
+            <div class="tiref">
+                <div class="tirea"></div>
+            </div>
+            <div class="tireb">
+                <div class="tirea"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

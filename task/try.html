@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .layout{
+            height: 100vh;
+            width: 100%;
+            background-color: grey;
+            display: grid;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 10px;
+            grid-template-areas:
+                "image1 image2 image2 image3 image3"
+                "image1 image4 image5 image3 image3"
+                "image1 image6 image7 image8 image9"
+                "image10 image10 image11 image12 image9"
+                "image10 image10 image13 image13 image9";
+        }
+
+        .layout .sections{
+            position: relative;
+            font-size: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            box-shadow: 1px 1px 10px 5px black inset;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .layout .sections video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .layout .sections:hover video{
+            display: block;
+        }
+        
+        item1{
+            grid-area: image1;
+            background-image: url("https://wallpapercave.com/wp/wp3282835.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        item2{
+            grid-area: image2;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/943/63/773/cyberpunk-2077-cyberpunk-video-games-wallpaper-preview.jpg");
+        }
+
+        item3{
+            grid-area: image3;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/399/889/309/uncharted-4-a-thief-s-end-nathan-drake-samuel-drake-video-games-wallpaper-preview.jpg");
+        }
+
+        item4{
+            grid-area: image4;
+            background-image: url("https://wallpapercave.com/wp/wp6448353.jpg");
+        }
+
+        item5{
+            grid-area: image5;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/790/727/718/face-mask-mask-military-armor-call-of-duty-hd-wallpaper-preview.jpg");
+        }
+
+        item6{
+            grid-area: image6;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/959/416/898/prince-of-persia-warrior-within-prince-of-persia-the-two-thrones-wallpaper-preview.jpg");
+        }
+
+        item7{
+            grid-area: image7;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/109/907/613/grand-theft-auto-v-gta-v-franklin-clinton-michael-de-santa-wallpaper-preview.jpg");
+        }
+
+        item8{
+            grid-area: image8;
+            background-image: url("https://wallpapercave.com/wp/wp1835433.jpg");
+        }
+
+        item9{
+            grid-area: image9;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/689/602/472/valorant-riot-games-video-games-digital-hd-wallpaper-preview.jpg");
+        }
+
+        item10{
+            grid-area: image10;
+            background-image: url("https://wallpapercave.com/wp/wp2614327.jpg");
+        }
+
+        item11{
+            grid-area: image11;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/1/398/339/elden-ring-landscape-game-art-video-game-art-video-games-hd-wallpaper-preview.jpg");
+        }
+
+        item12{
+            grid-area: image12;
+            background-image: url("https://wallpapercave.com/wp/wp13016899.jpg");
+        }
+
+        item12:hover{
+            background-image: url("https://www.kotaku.com.au/wp-content/uploads/2023/06/10/aad1c125661b5ca70b843b652c8959d7.gif?quality=75");
+        }
+
+        item13{
+            grid-area: image13;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/509/886/447/tomb-raider-lara-croft-blood-jungle-wallpaper-preview.jpg");
+        }
+
+    </style>
+
+    <script>
+        document.querySelectorAll('.sections').forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                const video = section.querySelector('video');
+                if (video) {
+                    video.play();
+                }
+            });
+
+            section.addEventListener('mouseleave', () => {
+                const video = section.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        });
+    </script>
+
+    <div class="layout">
+        <item1 class="sections">
+            <video src="../Images/Y2mate_%20Online%20Video%20Downloader.mp4" width="300" autoplay muted></video>
+        </item1>
+        <item2 class="sections">
+            <video src="../Images/videoplayback1.mp4" autoplay muted></video>
+        </item2>
+        <item3 class="sections">
+            <video src="../Images/videoplayback2.mp4" autoplay muted></video>
+        </item3>
+        <item4 class="sections">
+            <video src="../Images/videoplayback3.webm" autoplay muted></video>
+        </item4>
+        <item5 class="sections">
+            <video src="../Images/videoplayback4.mp4" autoplay muted></video>
+        </item5>
+        <item6 class="sections">
+            <video src="../Images/videoplayback6.mp4" autoplay muted></video>
+        </item6>
+        <item7 class="sections">
+            <video src="../Images/videoplayback7.webm" autoplay muted></video>
+        </item7>
+        <item8 class="sections">
+            <video src="../Images/videoplayback8.webm" autoplay muted></video>
+        </item8>
+        <item9 class="sections">
+            <video src="../Images/videoplayback9.webm" autoplay muted></video>
+        </item9>
+        <item10 class="sections">
+            <video src="../Images/videoplayback10.webm" autoplay muted></video>
+        </item10>
+        <item11 class="sections">
+            <video src="../Images/videoplayback11.mp4" autoplay muted></video>
+        </item11>
+        <item12 class="sections">
+            <video src="../Images/videoplayback12.webm" autoplay muted></video>
+        </item12>
+        <item13 class="sections">
+            <video src="../Images/videoplayback13.webm" autoplay muted></video>
+        </item13>
+    </div>
+
+</body>
+</html

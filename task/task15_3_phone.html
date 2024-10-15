@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task15_3_phone</title>
+    <style>
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: lightcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .outer{
+            width: 20%;
+            height: 80vh;
+            background-color: black;
+            border: 1rem black solid ;
+            border-radius: 20px;
+        }
+        .inner{
+            width: 100%;
+            height: 80vh;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            position: relative;
+            animation: color 6s linear infinite;
+            display: flex;
+        }
+        @keyframes color {
+            0%{
+                background-color: whitesmoke;
+            }
+            6%{
+                background-color: aqua;
+            }
+            18%{
+                background-color: red;
+            }
+            24%{
+                background-color: violet;
+            }
+            30%{
+                background-color: maroon;
+            }
+            36%{
+                background-color: mediumaquamarine;
+            }
+            42%{
+                background-color: mediumvioletred;
+            }
+            48%{
+                background-color: moccasin;
+            }
+            52%{
+                background-color: magenta;
+            }
+            60%{
+                background-color: chocolate;
+            }
+            66%{
+                background-color: gainsboro;
+            }
+            72%{
+                background-color: darkgray;
+            }
+            78%{
+                background-color: darkblue;
+            }
+            84%{
+                background-color: bisque;
+            }
+            90%{
+                background-color: lightseagreen;
+            }
+            100%{
+                background-color: lightpink;
+            }  
+        }
+        .inner:hover{
+            animation-play-state: paused;
+        }
+        .line{
+            width: 30%;
+            height: 5px;
+            background-color: gray;
+            border-radius: 20px;
+            position: relative;
+            top:98%;
+            left:30%;
+        }
+        .camera{
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            border: 2px ghostwhite solid;
+            position: absolute;
+            top:8px;
+            left:45%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="outer">
+            <div class="inner">
+                <div class="line"></div>
+                <div class="camera"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display task2</title>
+    <style>
+        body {
+            background-color: lightcyan;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            height: 50px;
+
+        }
+
+        .cart {
+            height: 600px;
+            width: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 1px 1px 5px 10px rgba(220, 220, 220, 0.364);
+        }
+
+        .inner button {
+            height: 35px;
+            width: 35%;
+            border-radius: 15px;
+            background-color: orange;
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1> display flex task 2</h1>
+    <div class="main">
+        <div class="cart">
+            <div class="image">
+                <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bzkqins-539573273?$650_519_PNG$"
+                    alt="">
+            </div>
+            <div class="inner">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart3"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+                    add to cart
+                </button>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black"
+                        class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641z" />
+                    </svg>
+                    Buy now
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

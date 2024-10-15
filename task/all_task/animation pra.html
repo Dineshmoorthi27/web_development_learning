@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation pra</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+        }
+
+        .wheel {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: aqua;
+            position: absolute;
+            animation: mover 6s linear normal forwards,rotate 2s linear infinite normal forwards;
+        }
+
+        .wheel .square {
+            width: 210px;
+            height: 210px;
+            background-color: brown;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes mover {
+            from{
+                top:0;
+                left:0;
+            }
+            to{
+                top:0;
+                left:1140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wheel">
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>

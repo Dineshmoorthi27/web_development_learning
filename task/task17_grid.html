@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_17_grid</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .layout {
+            width: 100%;
+            height: 100vh;
+            background-color: lightgrey;
+            display: grid;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-areas: "one two two three three"
+                "one four five three three"
+                "one six seven eight nine"
+                "thr thr ten eleven nine"
+                "thr thr twoe twoe nine";
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        .layout .sections{
+            display: grid;
+            overflow: hidden;
+        }
+        .layout img{
+            width: 100%;
+            height: 100%;
+            place-items: centre;
+
+            border-radius: 8px;
+        }
+        .sections1{
+            grid-area: one;
+        }
+        .sections2{
+            grid-area: two;
+        }
+        .sections3{
+            grid-area: three;
+        }
+        .sections4{
+            grid-area: four;
+        }
+        .sections5{
+            grid-area: five;
+        }
+        .sections6{
+            grid-area: six;
+        }
+        .sections7{
+            grid-area: seven;
+        }
+        .sections8{
+            grid-area: eight;
+        }
+        .sections9{
+            grid-area: nine;
+        }
+        .sections10{
+            grid-area: ten;
+        }
+        .sections11{
+            grid-area: eleven;
+        }
+        .sections12{
+            grid-area: twoe;
+        }
+        .sections13{
+            grid-area: thr;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <img src= "https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"alt="" class="sections sections1">
+        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections2">
+        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="" class="sections sections3">
+        <img src="https://images.pexels.com/photos/33101/new-wing-emergency-at-the-moment.jpg?auto=compress&cs=tinysrgb&w=600" alt="" class="sections sections4">
+        <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80" alt="" class="sections sections5">
+        <img src="https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections6">
+        <img src="https://images.pexels.com/photos/441379/pexels-photo-441379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections7">
+        <img src="https://images.pexels.com/photos/788200/pexels-photo-788200.jpeg" alt="" class="sections sections8">
+        <img src="https://images.pexels.com/photos/572861/pexels-photo-572861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections9">
+        <img src="https://images.pexels.com/photos/641559/pexels-photo-641559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections10">
+        <img src="https://images.unsplash.com/photo-1623656462151-5e62492f8feb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="sections sections11">
+        <img src="https://images.pexels.com/photos/2832217/pexels-photo-2832217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections12">
+        <img src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="sections sections13">
+
+    </div>
+</body>
+
+</html>

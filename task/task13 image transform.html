@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images transform</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .outer{
+            height: 400px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .outer img {
+            width: 300px;
+            height: auto;
+            position: absolute;
+        }
+        .outer img {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            transition: all 4s ease;
+        }
+        .outer:hover img:nth-child(1) {
+            transform: skewX(45deg) translateX(-300px);
+        }
+
+        .outer:hover img:nth-child(2) {
+            transform: skewX(-45deg) translateX(300px);
+        }
+        .outer:hover img:nth-child(3) {
+            transform: translateX(0);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <img src="https://www.phoolwala.com/images/product/pw-24rr-pp.jpg" alt="">
+        <img src="https://assets.bloomsflora.com/uploads/product-pics/6147_74_6147.webp" alt="">
+        <img src="https://b446083.smushcdn.com/446083/wp-content/uploads/sites/7/2016/10/AboutFlowers_GiftGiving_OrangeYellow_tag600.jpg?lossy=1&strip=1&webp=1"
+            alt="">
+        
+    </div>
+</body>
+
+</html>

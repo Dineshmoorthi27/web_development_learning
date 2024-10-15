@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>see saw</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .main {
+            background-color: #ffc5fd;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .holder {
+            display: flex;
+            align-items: end;
+            width: 60px;
+            height: 160px;
+            background-color: maroon;
+            border-radius: 50px 50px 0px 0px;
+            position: absolute;
+        }
+
+        .main .slider {
+            width: 700px;
+            height: 25px;
+            background-color:maroon;
+            border-radius: 20px;
+            position: relative;
+            top: -9rem;
+            left: 0rem;
+            animation: bar 6s linear infinite alternate;
+        }
+
+
+        .ball {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -9rem;
+            left: 0rem;
+
+            background:
+                radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.5), rgb(15, 14, 14) 70%),
+                radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.5), rgb(15, 14, 14)60%),
+                radial-gradient(circle at 55% 50%, rgba(255, 255, 255, 0.5), rgb(15, 14, 14)70%);
+            animation: ball 6s linear infinite alternate;
+        }
+
+        @keyframes ball {
+            from {}
+
+            to {
+                top: -9rem;
+                left: 37rem;
+                transform: rotate(360deg);
+            }
+        }
+        .ball .box {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+        }
+
+        @keyframes bar {
+            from {
+                transform: rotate(15deg);
+            }
+
+            to{
+                transform: rotate(-15deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="holder"></div>
+        <div class="slider">
+            <div class="ball">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
