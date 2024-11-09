@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="confirmation()">Ask permition</button>
+    <h1 id="text"></h1>
+    <script>
+        function confirmation() {
+            let msg // undefined varible msg
+            let result = confirm("Do you want to save the data? ")
+            if (result){
+                console.log("your data is saved...");
+                msg = "your data is saved..."
+            }
+            else
+            {
+                console.log( "your data is not saved!!");
+                msg = "your data is not saved!!" 
+            }
+            document.getElementById("text").innerHTML = msg
+        }
+    </script>
+</body>
+</html>

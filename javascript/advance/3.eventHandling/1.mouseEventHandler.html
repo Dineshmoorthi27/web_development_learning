@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event handler</title>
+    <style>
+        #name1{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="name" onclick="changeText()">who are you?</h1>
+    <hr>
+    <h1 id="name1" ondblclick="changeColor()">double click me to change color</h1>
+    <hr>
+    <!-- <h1 id="name2" onclick="changeText()" ondblclick="changeColor()">change text and color at the same time</h1> -->
+     <h1 id="name2" onmouseover="changeBackgroundColor()" onmouseout="changeBackToNormal()"> Take cursor over me</h1>
+    <script>
+
+        function changeText() {
+            document.getElementById("name").innerHTML = "I'm devil Java Script 😈";
+        }
+        function changeColor(){
+            document.getElementById("name1").style.color = "magenta";
+        }
+        function changeBackgroundColor(){
+            let text1 =document.getElementById("name2")
+            text1.style.backgroundColor = "lightblue";
+            text1.innerHTML = 'yes.. I have taken over';
+        }
+        function changeBackToNormal(){
+            let text1 =document.getElementById("name2")
+            text1.style.backgroundColor = "white";
+            text1.innerHTML = 'Take cursor over me';
+        }
+    </script>
+</body>
+</html>

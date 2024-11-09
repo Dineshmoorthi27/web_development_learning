@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event handler</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+
+        }
+        img{
+            width: 500px;
+            height: 500px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV80Nl8zZF9yZW5kZXJfaWNvbl9vZl9hbmdyeV9lbW9qaV95ZWxsb3dfZmFjZV9taV9kZTkzNGM4ZC1iN2U2LTRjYWEtODI1OC1mN2VjMWQ0YWNlODYucG5n.png" alt="img" id="icon" onmouseover="changeImage()" onmouseout="changeBackImage()">
+    <script>
+        let image = document.getElementById('icon')
+        function changeImage(){
+            image.innerHTML = image.src="https://icon2.cleanpng.com/20240322/rji/transparent-smiley-face-happy-smiley-face-with-heart-eyes65fe52c83a0400.97639355.webp";
+            console.log("image changed");
+        }
+        function changeBackImage(){
+            image.innerHTML=image.src = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV80Nl8zZF9yZW5kZXJfaWNvbl9vZl9hbmdyeV9lbW9qaV95ZWxsb3dfZmFjZV9taV9kZTkzNGM4ZC1iN2U2LTRjYWEtODI1OC1mN2VjMWQ0YWNlODYucG5n.png"
+        }
+    </script>
+</body>
+</html>

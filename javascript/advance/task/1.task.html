@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task1</title>
+</head>
+
+<body>
+    <button onclick="explore_ram()">Explore Ram_Prakesh</button>
+    <div id="output"></div>
+    <script>
+        function explore_ram() {
+            let r1 = confirm("Do you want to Explore Ramprakesh ");
+            if (r1) {
+                let r2 = alert("Welcome to Ramprakesh's world");
+                let r3 = confirm("Is ramPrakesh having girlfriends?")
+                if (r3) {
+                    let r4 = prompt("how many girl friends?")
+                    if (r4) {
+                        let result=[]
+                        let isValid = true
+                        for (let i = 0; i < r4; i++) {
+                            let girlFriend = prompt(`name of girlfriend ${i + 1}:`);
+                            if ( girlFriend === null) {
+                                isValid = false;
+                                break;
+                            }
+                            result.push(girlFriend);
+                        }
+                        if (isValid) {
+                            document.getElementById("output").innerHTML = `<br>Your girl friends list are: ${result.join(", ")}`;
+                            console.log(result.join(", "));
+                            
+                        } else {
+                            alert("Not valid");
+                        }
+                    }
+                    else {
+                        alert("cheater..");
+                    }
+
+                }
+                else {
+                    alert("don't lie")
+                }
+            }
+            else {
+                alert("Go to hell🤦‍♂️");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

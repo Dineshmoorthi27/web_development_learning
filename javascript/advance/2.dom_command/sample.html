@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample getElementById </title>
+</head>
+<body>
+    <textarea id="text-1"></textarea>
+    <button onclick="transfer()">submit</button>   
+    <h1 id="content"></h1> 
+    <script>
+        function transfer() {
+            let res =document.getElementById('text-1').value
+            document.getElementById('content').innerHTML = res.toUpperCase()
+        }
+    </script>
+</body>
+</html>

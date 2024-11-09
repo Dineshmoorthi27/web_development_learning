@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName</title>
+</head>
+<body>
+    <label for="radio"> Select your Gender: </label><br><br>
+        <input type="radio" name="gender" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label>
+        <input type="radio" name="gender" id="others"><label for="others">Others</label><br><br>
+        <button onclick="count()">count gender</button>
+        <p id=genders ></p>
+        <script>
+            function count() {
+                let gen = document.getElementsByName("gender")
+                console.log(gen);
+                
+                console.log(`how many Genders :${gen.length}`);
+                document.getElementById('genders').innerHTML = `How many Genders :${gen.length}`   
+            }
+        </script>
+</body>
+</html>

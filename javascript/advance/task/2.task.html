@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2 </title>
+</head>
+<body>
+    <h1 id="upper">hello, how are you ?</h1>
+    <button onclick="change_uppercase()">change to uppercase h1</button>
+
+    <hr>
+    <h1>Transfer text one textbox to another text box.</h1>
+    <label for="">Present address</label>
+    <textarea name="" id="text-1"></textarea><br><br><br>
+    <!-- <button onclick="transform()" type="">same as above</button><br> -->
+    <input type="checkbox" name="" id="" onclick="transform()">permant address same as Present address <br><br><br>
+    <label for="">permant address</label>
+    <textarea name="" id="text-2"></textarea>
+    <script>
+        function change_uppercase(){
+            let value = document.getElementById("upper").value
+            console.log(value);
+            document.getElementById("upper").style.textTransform = "uppercase";
+        }
+        function transform() {
+            // fetching value from first text box
+            let textOne = document.getElementById('text-1').value
+            console.log(textOne)
+            // converting the value to uppercase
+            let upperText=textOne.toUpperCase()
+            console.log(upperText)
+            // send value to textarea second
+            document.getElementById('text-2').value=upperText
+            
+        }
+        
+    </script>
+</body>
+</html>

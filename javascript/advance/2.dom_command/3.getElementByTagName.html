@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementBYTagName</title>
+</head>
+<body>
+    <h1 class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+    <p class="etext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda distinctio, illo ipsum quia non provident?</p>
+
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum mollitia quas, facilis doloremque maiores consectetur laudantium accusantium aliquid optio odit vitae eos labore, cupiditate corrupti quidem. Earum, ducimus perspiciatis!</div>
+
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, aspernatur!</p>
+
+    <button onclick="countTag()">countTags present</button>
+    <p id = "paraTags"></p>
+    <script>
+        function countTag() {
+            let allH1Tags = document.getElementsByTagName("h1")
+            console.log(allH1Tags)
+            for (let i in allH1Tags){
+                console.log(allH1Tags[i].textContent)
+            }
+            let allH2Tags = document.getElementsByTagName("h2")
+            console.log(allH2Tags)
+            for (let i in allH2Tags){
+                console.log(allH2Tags[i].textContent)
+            }
+            let allPTags= document.getElementsByTagName('p')
+            console.log(allPTags)
+            for (let i in allPTags){
+                console.log(allPTags[i].textContent)
+            }
+            document.getElementById('paraTags').innerHTML = `Number of h1 tags : ${allH1Tags.length} <br> Number of h2 tags : ${allH2Tags.length} <br> Number of Para tags present :${allPTags.length}`
+        }
+    </script>
+</body>
+</html>

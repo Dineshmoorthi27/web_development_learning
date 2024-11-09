@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    <button onclick="getUserName()">Ask username</button>
+    <h1 id="res"></h1>
+    <script>
+        // alert(`welcome ${userName}! happy to see to back 💕`)
+        function getUserName(){
+            let msg
+            var userName = prompt("Enter your username?","userName");
+            console.log(`entered name is : ${userName}`)
+            if (userName ==="" || userName == null){
+                msg="no name entered"
+            }
+            else{
+                msg=`entered name is ${userName}`
+            }
+            document.getElementById('res').innerHTML = msg
+        }
+    </script>
+</body>
+</html>

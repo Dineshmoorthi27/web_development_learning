@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <h1 class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum commodi, eaque eum quis sapiente, veritatis nesciunt quam, aliquid labore inventore repellendus. Beatae impedit minima eos eius. Cum soluta exercitationem iusto!</h1>
+    <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+    <p class="etext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda distinctio, illo ipsum quia non provident?</p>
+
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum mollitia quas, facilis doloremque maiores consectetur laudantium accusantium aliquid optio odit vitae eos labore, cupiditate corrupti quidem. Earum, ducimus perspiciatis!</div>
+
+    <button onclick="mutipleclass()">click here</button>
+    <script>
+        function mutipleclass() {
+            let textelements = document.getElementsByClassName('text')
+            console.log(textelements);
+            // let t1=textelements[0].textContent
+            // console.log(t1);
+            // textelements[0].style.color='red'
+            for (let i in textelements){
+                textelements[i].style.color='blue'
+            }
+            
+        }
+    </script>
+</body>
+</html>

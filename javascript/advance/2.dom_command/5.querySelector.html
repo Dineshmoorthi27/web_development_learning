@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+    <style>
+        .heading {
+            display: flex;
+            h1 {
+                display: inline;
+                align-items: center;
+            }
+        }
+
+        .box {
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        #wrap-one {
+            width: 50%;
+            height: 70vh;
+            border: 2px solid red;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        #wrap-two {
+            width: 50%;
+            height: 70vh;
+            border: 4px solid blue;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>querySelector examples</h1>
+    </div>
+    
+    <div class="box">
+        <div id="wrap-one">
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+            <h1>this is H1 belong to div wrap-one</h1>
+        </div>
+        <div id="wrap-two">
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+            <h1>This is H1 belong to div wrap-two</h1>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="wrapOnequery()">querySelectorBox1</button>
+        <button onclick="wrapOnequeryall()">querySelectorAllBox1</button>
+        <br>
+
+        <button onclick="wrapTwoquery()">querySelectorbox2</button>
+        <button onclick="wrapTwoqueryall()">querySelectorAllBox2</button>
+    </div>
+
+    <script>
+        function wrapOnequery() {
+            let wrapOne = document.getElementById('wrap-one')
+            wrapOne.querySelector('h1').style.color = 'brown'
+            wrapOne.querySelector('h1').style.backgroundColor = 'lime'
+        }
+        function wrapTwoquery() {
+            let wrapOne = document.getElementById('wrap-two')
+            wrapOne.querySelector('h1').style.color = 'magenta'
+            wrapOne.querySelector('h1').style.backgroundColor = 'yellow'
+        }
+        function wrapOnequeryall() {
+            let wrapOneall = document.getElementById('wrap-one').querySelectorAll('h1')
+            console.log(wrapOneall)
+            for (let i in wrapOneall) {
+                wrapOneall[i].style.color = 'blue'
+                wrapOneall[i].style.backgroundColor = 'pink'
+            }
+        }
+        function wrapTwoqueryall() {
+            let wrapOneall = document.getElementById('wrap-two').querySelectorAll('h1')
+            console.log(wrapOneall)
+            for (let i in wrapOneall) {
+                wrapOneall[i].style.color = 'lightgreen'
+                wrapOneall[i].style.backgroundColor = 'lavender'
+            }
+        }
+    </script>
+</body>
+
+</html>

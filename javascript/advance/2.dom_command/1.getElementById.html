@@ -1,0 +1,91 @@
+<!-- tags used in 
+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <h1>add two number using prompt and add it using javascript</h1>
+    <button onclick="addNum()">add</button>
+    <p id="sum"></p>
+    <script>
+        function addNum() {
+            let num1=parseInt(prompt("enter number 1 : "))
+            let num2 = parseInt(prompt("enter number 2: "))
+            console.log(num1,num2);
+            console.log(typeof(num1),typeof(num2))
+            let sum = num1 + num2
+            console.log(sum);
+            document.getElementById("sum").innerHTML=sum
+        }
+    </script>
+    <hr>
+    <!-- <label for="">Enter number: </label>
+    <input type="text" name="" id="inpNum">
+    <br><br>
+    <button type="button" onclick="calculate()">calculate</button>
+    <p id="sqrt"></p>
+    <p id="cube"></p>
+    <script>
+        function calculate(){
+            let userValue = document.getElementById("inpNum").value
+            console.log(userValue);
+            let sqrt =userValue*userValue
+            let cube = userValue **3
+            console.log(sqrt,cube);
+            document.getElementById('sqrt').innerHTML=`square of ${userValue} is ${sqrt}`
+            document.getElementById('cube').innerHTML=`cube of ${userValue} is ${cube}`
+        }
+    </script>
+    <hr> -->
+    <!-- updated code -->
+    <label for="">Enter number: </label>
+    <input type="text" name="" id="inpNum">
+    <br><br>
+    <button type="button" onclick="calculate()">calculate</button>
+    <p id="result"></p>
+    <script>
+        function calculate(){
+            let userValue = document.getElementById("inpNum").value
+            console.log(userValue);
+            let sqrt =userValue*userValue
+            let cube = userValue **3
+            console.log(sqrt,cube);
+            document.getElementById('result').innerHTML=`square of ${userValue} is ${sqrt} <br> cube of ${userValue} is ${cube}`
+        }
+    </script>
+
+    <hr>
+    <p id="para1">This is an example for textcontent in getElementById </p>
+    <button onclick="fetchText()"> Submit</button>
+    <h1 id="output"></h1>
+    <script>
+        function fetchText(){
+            let value = document.getElementById('para1').textContent
+            console.log(value);
+            document.getElementById('output').innerHTML=value
+            document.getElementById('output').style.color = 'blue'
+        }
+    </script>
+
+
+<hr>
+<h1>add image using javascript</h1>
+<img id="image">
+<button onclick="addImage()">add image</button>
+<script>
+    function addImage() {
+        let img = document.getElementById('image');
+        img.src="https://quintagroup.com/cms/js/js-image/javascript-logo.png";
+        img.style.borderRadius = '15px';
+        img.style.boxShadow = '10px 10px 15px black';
+        img.style.width = '550px';
+        img.style.height = '550px';
+    }
+</script>
+</body>
+</html>
