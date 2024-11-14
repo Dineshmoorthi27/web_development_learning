@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>focus Event</title>
+    <style>
+      #search {
+        height: 40px;
+        width: 40px;
+        border-radius: 100px;
+        transition: width 1s;
+      }
+      .expand {
+        /* width: 40px; */
+        border: 2px solid green;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      name=""
+      id="search"
+      onfocus="expandingsearch()"
+      onblur="shrinkSearch()"
+    />
+    <script>
+      let searchEle = document.getElementById("search");
+      function expandingsearch(params) {
+        searchEle.classList.add("expand");
+        searchEle.style.width = "40%";
+        // searchEle.style.border = "2px green soild";
+        // searchEle.style.outline = "none";
+        // searchEle.style.transition='width 1s'
+      }
+
+      function shrinkSearch() {
+        searchEle.classList.remove("expand");
+        searchEle.style.width = '40px';
+        searchEle.style.transition = 'width 1s'
+
+      }
+    </script>
+  </body>
+</html>

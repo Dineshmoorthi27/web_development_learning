@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard event</title>
+</head>
+<body>
+    <input type="text" id="inpVal" onkeyup="keyDown()">
+    <hr>
+    <h1> Example for onkeyup is on job application to automatically convert text to </h1>
+    <input type="text" id="value" onkeyup="keyup()">
+    <script>
+        function keyDown(){
+        alert(document.getElementById("inpval").innerHTML = "you pressed a key");
+        }
+        function keyup(){
+            // fetch element and store
+            let inpElement = document.getElementById("value");
+            // console.log(inpElement);
+            // // get value from inpElement 
+            // let inpVal = inpElement.value
+            // console.log(inpVal);
+            // // // convert to uppercase
+            // let upperCase = inpVal.toUpperCase();
+            // console.log(upperCase);
+            // // sending value to element "inpElement"
+            // inpElement.value = upperCase
+            
+            // or alternative 
+            inpElement.value = inpElement.value.toUpperCase()
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Event handler</title>
+</head>
+<body>
+    <form action="">
+        <label for="">select your skills</label>
+
+        <select name="" id="drop-down" onchange="trackTheChange()">
+            <option value="" hidden>- choose here -</option>
+            <option value="python">python</option>
+            <option value="Django">Django</option>
+            <option value="ReactJs">ReactJs</option>
+            <option value="Flask">Flask</option>
+            <option value="computer science">computer science</option>
+        </select>
+        <h1 id="result"></h1>
+
+
+
+        <hr>
+        <input type="text" name='' id="val-value" oninput="countCharater()">
+        <p >Number of characters enters: <span id="count"></span> </p>
+    </form>
+    <br><br>
+
+    <hr>
+    <form action="" id="form-form" onsubmit="">
+        <label for="">userName : </label>
+        <input type="text" name="" id="userName">
+        <br><br>
+        <label for="">password</label>
+        <input type="password" name="" id="password"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        // document.getElementById('form-form').addEventListener('submit',formSubmit)
+        // function formSubmit(e){
+        //     e.preventDefault()
+        //     let userName = document.getElementById('userName').value
+        //     let password = document.getElementById('password').value
+        //     console.log(userName,password);
+        //     alert("form submitted successfully")
+        //     document.getElementById('form-form').reset()
+        // }
+        // or passing arrow function
+        document.getElementById('form-form').addEventListener('submit',()=>{
+                alert("form submitted successfully")
+            })
+    </script>
+    <script>
+        function trackTheChange() {
+            let dropEle = document.getElementById('drop-down')
+            console.log(dropEle);
+            console.log(dropEle.value);
+            document.getElementById("result").innerHTML=`you have choose ${dropEle.value} as your best Skill`
+        }
+        function countCharater() {
+            let allValue = document.getElementById('val-value').value
+            let res = allValue.length
+            document.getElementById('count').innerHTML=res
+        }
+    </script>
+</body>
+</html>
+
+

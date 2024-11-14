@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>windows Event handler</title>
+    <style>
+      .para {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        p {
+          width: 200px;
+          height: 200px;
+          font-size: 20px;
+          font-weight: 600;
+          overflow: scroll;
+          /* overflow-x: hidden; */
+          cursor: pointer;
+        }
+      }
+      #box{
+        height: 200px;
+        width: 100%;
+        border: 5px solid rebeccapurple;
+        background-color: blanchedalmond;
+      }
+      .empty{
+        height: 100%;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body
+    onload="console.log('page loaded successfully')"
+    onresize="findResoultion()"
+    onscroll="fillcolor()"
+  >
+    <h1 id="resolution">hello</h1>
+
+    <hr />
+    <div class="para">
+      <p onscroll="displayMsg()">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quo
+        reprehenderit qui quae fugiat suscipit? Quae consectetur nam placeat,
+        perspiciatis quis enim molestiae omnis possimus asperiores esse
+        doloribus tempore in nesciunt dicta doloremque sapiente, et illum
+        dolorem nemo ipsum! Quo dolorem similique neque amet, est debitis velit
+        reprehenderit sapiente modi laborum consequatur molestias dolores
+        perspiciatis repellendus quasi illo id in eaque distinctio ullam
+        possimus error tenetur architecto. Tenetur ullam pariatur quod, quia
+        ratione repellendus cupiditate. Nostrum optio magni saepe possimus dolor
+        voluptatum ipsam nesciunt nobis commodi tenetur! Nam ipsum modi eum
+        temporibus, quod tempore et. A ipsum soluta, aliquid perferendis facilis
+        iure possimus nulla quo itaque, fuga sint voluptates repellat
+        laudantium? Fugiat labore exercitationem pariatur architecto tenetur hic
+        in nobis sunt quasi sint doloremque aut, veniam, quisquam maiores,
+        commodi eligendi ullam explicabo officia illo et saepe similique ipsam
+        nam nostrum. Facere natus assumenda aperiam accusantium laborum
+        reprehenderit eius eum, eos fuga deserunt, et voluptates consequuntur
+        vero, quibusdam velit! Odio, nisi totam quas assumenda esse pariatur
+        nostrum animi natus quisquam nesciunt iure tempore doloribus, impedit,
+        explicabo eligendi. Animi quasi et fugiat nobis explicabo illo vero non
+        nisi delectus est magni, fugit, ipsa aliquam cum harum sit? Aut ad non
+        in ab exercitationem atque minima repudiandae repellendus nihil,
+        deleniti excepturi assumenda officia omnis molestiae blanditiis
+        perferendis eveniet a nostrum quaerat. Odit aliquam error recusandae aut
+        amet laboriosam illo voluptates quas perspiciatis ad, iure eligendi
+        tenetur velit rem ducimus accusamus sapiente ut voluptatibus asperiores
+        cumque. Ea incidunt odio rem optio quo dicta quia earum perspiciatis
+        itaque! Culpa tempore consectetur amet. Illum consequuntur magni laborum
+        ullam expedita, iste minima doloribus, esse nulla temporibus nisi
+        adipisci, tempore ea itaque fugit? Dolores aut qui hic totam aliquid
+        accusantium necessitatibus libero natus? Eius vel soluta error ullam
+        quam labore, perspiciatis doloribus ipsum harum facere dolorum voluptate
+        eveniet.
+      </p>
+      <h4 id="pass"></h1>
+    </div>
+
+
+    <hr>
+    <div class="empty"></div>
+    <div id="box" ></div>
+    <div class="empty"></div>
+    
+    
+    
+    <script>
+      function findResoultion() {
+        let height = window.outerHeight;
+        let width = window.outerWidth;
+        document.getElementById(
+          "resolution"
+        ).innerHTML = `Resolution: ${height}  x ${width}`;
+      }
+      let scrollCount=0
+      function displayMsg(){
+        console.log(scrollCount++)
+        document.getElementById('pass').innerHTML = `you scrolled a paragraph for ${scrollCount} `;
+      }
+      function fillcolor(){
+        if (document.documentElement.scrollTop>500){
+            document.getElementById("box").style.background = "red";
+        }
+        else{
+            document.getElementById("box").style.background = "blue";
+        }
+      }
+    </script>
+  </body>
+</html>

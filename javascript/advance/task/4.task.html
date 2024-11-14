@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Task</title>
+    <style></style>
+  </head>
+  <body>
+    <label for="">States in India: </label>
+    <label>
+      <input
+        type="checkbox"
+        id="tamilnadu"
+        name="states"
+        value="Tamil Nadu"
+        onchange="selectServices()"
+      /> TN
+    </label>
+    <label>
+      <input
+        type="checkbox"
+        id="kerala"
+        name="states"
+        value="Kerala"
+        onchange="selectServices()"
+      /> KL
+    </label>
+    <label>
+      <input
+        type="checkbox"
+        id="karnataka"
+        name="states"
+        value="Karnataka"
+        onchange="selectServices()"
+      /> KA
+    </label>
+    <label>
+      <input
+        type="checkbox"
+        id="Andhra"
+        name="states"
+        value="Andhra"
+        onchange="selectServices()"
+      /> AP
+    </label>
+    
+    <p id="statesList"></p>
+    <script>
+      function selectServices() {
+        let selectedStates = Array.from(
+          document.querySelectorAll('input[name="states"]:checked')
+        )
+          .map((checkbox) => checkbox.value)
+          .join(", ");
+        
+        document.getElementById("statesList").innerHTML = selectedStates;
+      }
+    </script>
+  </body>
+</html>
