@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attribute</title>
+    <style>
+        .wrap{
+            height: 30vh;
+            width: 50%;
+            border: 2px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addAttribute()">Add Attribute</button>
+    <script>
+        function addAttribute(){
+            let division = document.createElement("div");
+            division.classList.add("wrap");
+            // adding ID 
+            division.setAttribute('id',"wrapper");
+            document.body.appendChild(division);
+        }
+    </script>
+</body>
+</html>

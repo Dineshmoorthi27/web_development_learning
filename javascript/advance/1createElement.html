@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Element </title>
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            border: 3px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createNew()">Add Element</button>
+    <div id="box">
+
+    </div>
+    <script>
+        function createNew(){
+            // create Element
+            let para = document.createElement("h1");
+            let btn = document.createElement('button');
+            console.log(btn);
+            console.log(para);
+            // create a text node
+            let paraEle = document.createTextNode("This is para");
+            let btnEle = document.createTextNode("Click here");
+            // add text node to element para
+            para.appendChild(paraEle);
+            btn.appendChild(btnEle);
+            // append the child inside the body
+            // document.body.appendChild(para);
+
+
+            // inserting text inside the box
+            document.getElementById('box').appendChild(para);
+            document.getElementById('box').appendChild(btn);
+
+            
+        }
+    </script>
+</body>
+</html>

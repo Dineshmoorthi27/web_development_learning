@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <style>
+      body {
+        background-image: url("https://img.freepik.com/free-photo/office-supplies_23-2148103974.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .valid {
+        height: 500px;
+        width: 500px;
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 20px;
+      }
+      h1 {
+        text-transform: uppercase;
+      }
+      input {
+        width: 80%;
+        height: 40px;
+      }
+      label {
+        font-size: 20px;
+      }
+      ::placeholder {
+        color: rgb(82, 82, 82);
+        font-size: 1.2rem;
+      }
+      button {
+        height: 40px;
+        width: 50%;
+      }
+      p{
+        margin: 0;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="valid">
+      <h1>form Validation</h1>
+      <input type="text" name="" id="userName" placeholder="username" />
+      <p id="userNamemsg"></p>
+      <button onclick="userNameValidation()">validate</button>
+    </div>
+    <script>
+      function userNameValidation() {
+        let errorMessage;
+        let userName = document.getElementById("userName").value;
+        if (userName === "" || userName === null) {
+          // display the error in form of alert.
+          alert("Please enter your username");
+          // display the error near the form field
+          document.getElementById("userNamemsg").innerHTML =
+            "Please enter your username";
+          userNamemsg.style.color = "red";
+          userNamemsg.style.fontSize = "20px";
+        } else {
+          alert(`Hello ${userName} Welcome to page`);
+          document.getElementById("userNamemsg").style.visibility = "hidden";
+        }
+        console.log(userName);
+      }
+    </script>
+  </body>
+</html>

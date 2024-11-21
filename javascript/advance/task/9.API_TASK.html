@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="APIStyleSheet.css">
+    <!-- <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;   
+        }
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            opacity: 0.5;
+        }
+        .outer{
+            z-index: 2;
+            width: 60%;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h1{
+                text-transform: uppercase;
+                padding: 20px 0;
+            }
+            .search-bar{
+                width: 300px;
+                height: 40px;
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10px;
+                margin-bottom: 20px;
+               
+                input{
+                    border: none;
+                    outline: none;
+                    width: 85%;
+                    font-size: 16px;
+                }
+                i{
+                    cursor: pointer;
+                    font-size: 20px;
+                }  
+            }
+            .images{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+            .flag,.coatOfArms {
+            width: 50%;
+            }
+            img{
+                width: 100%;
+                height: 300px;
+                border-radius: 5px;
+            }
+        }
+        #error {
+            color: red;
+            font-weight: bold;
+        }
+        
+
+    </style> -->
+</head>
+<body>
+    <div class="background-blur" id="background"></div>
+    <div class="outer">
+        <h1>Country API </h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for a country"><i class="bi bi-search" onclick="fetchCountry()"></i>
+        </div>
+        <br>
+        <h1 id="error"></h1>
+        <p id="countryName"></p>
+        <p id="officialName"></p>
+        <p id="captial"></p>
+        <p id="population"></p>
+        <p id="region"></p>
+        <p id="subRegion"></p>
+        <p id="currency"></p>
+        <div class="images">
+            <div class="flag">
+                <img  id="flag">
+            </div>
+            <div class="coatOfArms">
+                <img id="coatOfArms">
+            </div>
+        </div>
+    </div>
+    <script>
+        function fetchCountry() {
+            let countryName=document.getElementById('search').value;
+            let url = `https://restcountries.com/v3.1/name/${countryName}`
+            let fetched_URL=fetch(url)
+            fetched_URL.then((resp)=>{
+                if (!resp.ok){
+                    console.log("server not responding"); 
+                    throw new Error('server not responding');
+                }
+                else{
+                    return resp.json()
+                }
+            }).then((data)=>{
+                let country = data[0];
+                document.getElementById('error').innerHTML = '';
+                document.getElementById('countryName').innerHTML=`Country Name :&nbsp; ${country.name.common}`;
+                document.getElementById('officialName').innerHTML=`Official Name :&nbsp; ${country.name.official}`;
+                document.getElementById('captial').innerHTML=`Capital :&nbsp; ${country.capital}`;
+                document.getElementById('population').innerHTML = `Population :&nbsp; ${country.population}`;
+                document.getElementById('region').innerHTML = `Region :&nbsp; ${country.region}`;
+                document.getElementById('subRegion').innerHTML = `Sub Region :&nbsp; ${country.subregion}`;
+                // Handling dynamically changing currency keys
+                const currencyKeys = Object.keys(country.currencies);
+                const currency = country.currencies[currencyKeys[0]];// Get the first currency key
+                document.getElementById('currency').innerHTML = `Currency :&nbsp; ${currency.name} (${currency.symbol})`;
+                document.getElementById('flag').src = country.flags.png;
+                document.getElementById('coatOfArms').src = country.coatOfArms.png;
+                document.getElementById('background').style.backgroundImage = `url(${country.flags.png})`;
+            }).catch((err)=>{
+                console.log("error found ->",err);
+                document.getElementById('error').innerHTML = `${err}`;
+                document.getElementById('countryName').innerHTML = '';
+                    document.getElementById('officialName').innerHTML = '';
+                    document.getElementById('captial').innerHTML = '';
+                    document.getElementById('population').innerHTML = '';
+                    document.getElementById('region').innerHTML = '';
+                    document.getElementById('subRegion').innerHTML = '';
+                    document.getElementById('currency').innerHTML = ``;
+                    document.getElementById('flag').src = '';
+                    document.getElementById('coatOfArms').src = '';
+                    document.getElementById('background').style.backgroundImage = '';
+            }).finally(()=>{
+                console.log("API call completed");
+            })
+            
+            
+        }
+    </script>
+</body>
+</html>

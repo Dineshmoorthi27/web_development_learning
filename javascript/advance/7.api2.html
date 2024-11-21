@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country Api 2</title>
+</head>
+<body>
+    <button onclick="fetchAPI()">fetch API</button>
+    <h1 id="temp"></h1>
+    <img id="flag">
+    <img id="emb">
+    <script>
+        function fetchAPI(){
+            let url='https://restcountries.com/v3.1/name/india'
+            let fetched_URL=fetch(url)
+            fetched_URL.then((resp)=>{
+                if (!resp.ok){
+                    // throw new Error(resp.statusText)
+                    console.log("server not responding");   
+                }
+                else{
+                    return resp.json()
+                }
+            }).then((data)=>{
+                console.log(data)
+                console.log(data[0].name.common);
+                console.log(data[0].name.official);
+                document.getElementById('flag').src= data[0].flags.png
+                document.getElementById('emb').src= data[0].coatOfArms.png
+            }).catch((err)=>{
+                console.log("error found",err);
+            }).finally(()=>{
+                console.log("API call completed");
+            })
+
+        }
+    </script>
+</body>
+</html>

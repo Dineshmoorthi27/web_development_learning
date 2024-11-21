@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email validation</title>
+    <style>
+        body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        height: 40px;
+        width: 30%;
+        font-size: 1.2rem;
+        outline: none;
+        border-radius: 20px;
+        /* transform: translate(-50%, -50%); */
+      }
+
+      ::placeholder {
+        color: rgb(128, 130, 123);
+        font-size: 1.2rem;
+      }
+      .success {
+        border: 2px green solid;
+      }
+      .error {
+        border: 2px red solid;
+        animation: shake-it 0.1s ease-in-out 3 alternate;
+      }
+      @keyframes shake-it {
+        0% {
+          transform: translate();
+        }
+        75% {
+          transform: translate(-2px);
+        }
+        100% {
+          transform: translate(2px);
+        }
+      }
+    </style>
+</head>
+<body>
+    <input type="text" id="mail" onkeyup="validMail()" placeholder="abc@gmail.com">
+    <script>
+        function validMail(){
+            let mailEle= document.getElementById('mail');
+            let mailVal = mailEle.value
+            if (mailVal !== "" && mailVal !==null){
+                // success
+                if (mailVal.indexOf("@") <=0){
+                    // error
+                    mailEle.classList.add("error");
+                    mailEle.classList.remove("success");
+                }
+                else{
+                    // success
+                    if(mailVal.charAt(mailVal.length-4)==='.' || mailVal.charAt(mailVal.length-3)==='.'){
+                        // success
+                        mailEle.classList.add("success");
+                        mailEle.classList.remove("error");
+                    }
+                    else{
+                        // error
+                        mailEle.classList.add("error");
+                        mailEle.classList.remove("success");
+                    }
+                }
+            }
+            else{
+                // error
+                mailEle.classList.add("error");
+                    mailEle.classList.remove("success");
+            }
+        }
+    </script>
+</body>
+</html>

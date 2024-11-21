@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+<body>
+    <button onclick="fetchAPI()">fetch API</button>
+    <h1 id="temp"></h1>
+    <script>
+        function fetchAPI(){
+            let url='https://goweather.herokuapp.com/weather/mysore'
+            let fetched_URL=fetch(url)
+            fetched_URL.then((resp)=>{
+                if (!resp.ok){
+                    // throw new Error(resp.statusText)
+                    console.log("server not responding");   
+                }
+                else{
+                    return resp.json()
+                }
+            }).then((data)=>{
+                console.log(data)
+                // document.getElementById("temp").innerHTML=data
+            }).catch((err)=>{
+                console.log("error found",err);
+            }).finally(()=>{
+                console.log("API call completed");
+            })
+
+        }
+    </script>
+</body>
+</html>

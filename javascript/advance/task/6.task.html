@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .model {
+        width: 100%;
+        height: 100vh;
+        background-color: lightslategrey;
+        display: none;
+        position: absolute;
+        .popup {
+          width: 200px;
+          height: 200px;
+          border: 3px maroon solid;
+          border-radius: 10px;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          button {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="pop()">Click Here!</button>
+    <div class="model" id="model">
+      <div class="popup">
+        <button onclick="closepop()">X</button>
+        <br />
+        <p>This is a model</p>
+      </div>
+    </div>
+    <script>
+      let model = document.getElementById("model");
+      function pop() {
+        let setTime = setTimeout(() => {
+          model.style.display = "block";
+          console.log("block");
+        }, 2000);
+      }
+      function closepop() {
+        model.style.display = "none";
+        console.log("none");
+        
+      }
+    </script>
+  </body>
+</html>
