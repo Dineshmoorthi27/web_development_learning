@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <h1>Add data to local storage</h1>
+    <label for="">Enter the key : </label> <input type="text" name="" id="keyItem"><br><br>
+    <label for="">Enter the value :</label> <input type="text" name="" id="valueItem"><br><br>
+    <button type="submit" value="save" onclick="saveData()">save</button>
+    <hr>
+    <h1>display the data from localStorage </h1>
+    enter a key :<input type="text" name="" id="fetchvalue"><br><br>
+    <button onclick="fetchValue()">display</button>
+    <p id="value"></p>
+    <hr>
+    <hr>
+    <h1>Remove value</h1>
+    enter a key : <input type="text" name="" id="removeKey"><br><br>
+    <button onclick="removeData()">Remove</button>
+    <p id="removedvalue" ></p>
+    <hr>
+    <h1>clear All</h1>
+    <button onclick="clearStorage()">clear data</button>
+    <script>
+        // funation to save the data
+        function saveData() {
+            let keyData = document.getElementById('keyItem').value
+            let valueData = document.getElementById('valueItem').value
+            // to set the key and value in local storage
+            localStorage.setItem(keyData,valueData);
+            
+        }
+        // function to fetch the data
+        function fetchValue(){
+            let key = document.getElementById('fetchvalue').value
+            document.getElementById('value').innerHTML= localStorage.getItem(key)
+        }
+        // function to remove the data
+        function removeData(){
+            let removeKey = document.getElementById('removeKey').value
+            localStorage.removeItem(removeKey)
+            document.getElementById('removedvalue').innerHTML = `Data removed successfully`
+        }
+        // function to clear all the data
+        function clearStorage(){
+            localStorage.clear()
+            document.getElementById('msg').innerHTML = `storage cleared`
+        }
+   </script>
+</body>
+</html>
