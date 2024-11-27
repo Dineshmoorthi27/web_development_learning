@@ -5,6 +5,8 @@ console.log("Date : ",date);
 // 1. getDay() - 
 let day= date.getDay()
 console.log("today is ",day);
+// let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+// console.log("Today is ",days[day])
 switch(day) {
     case 0:
         day = 'Sunday'
@@ -29,50 +31,54 @@ switch(day) {
         break;
 }
 // 2. date()
-tdate = date.getDate()
+let tdate = date.getDate()
 console.log("today is ",tdate);
 // 2. month()
 let month=date.getMonth()
-console.log("today is ",month);
-switch(month) {
-    case 0:
-        month = 'Jan'
-        break;
-    case 1:
-        month = 'Feb'
-        break;
-    case 2:
-        month = 'Mar'
-        break;
-    case 3:
-        month = 'Apr'
-        break;
-    case 4:
-        month = 'May'
-        break;
-    case 5:
-        month = 'Jun'
-        break;
-    case 6:
-        month = 'Jul'
-        break;
-    case 7:
-        month = 'Aug'
-        break;
-    case 8:
-        month = 'Sep'
-        break;
-    case 9:
-        month = 'Oct'
-        break;
-    case 10:
-        month = 'Nov'
-        break;
-    case 11:
-        month = 'Dec'
-        break;
-}
-// 3.year()
+console.log("today is number ",month);
+// switch(month) {
+//     case 0:
+//         month = 'Jan'
+//         break;
+//     case 1:
+//         month = 'Feb'
+//         break;
+//     case 2:
+//         month = 'Mar'
+//         break;
+//     case 3:
+//         month = 'Apr'
+//         break;
+//     case 4:
+//         month = 'May'
+//         break;
+//     case 5:
+//         month = 'Jun'
+//         break;
+//     case 6:
+//         month = 'Jul'
+//         break;
+//     case 7:
+//         month = 'Aug'
+//         break;
+//     case 8:
+//         month = 'Sep'
+//         break;
+//     case 9:
+//         month = 'Oct'
+//         break;
+//     case 10:
+//         month = 'Nov'
+//         break;
+//     case 11:
+//         month = 'Dec'
+//         break;
+// }
+
+let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+month = months[month]
+console.log(" todays month is ",month);
+//  3.year()
 let year = date.getFullYear()
 console.log("today is ",year);
 console.log("formate is :->  Monday - 4th of Nov , 2024");

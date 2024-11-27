@@ -1,3 +1,4 @@
+// Higher Order Function
 // 14.map() - it is used modify the array. --> it is an higher order function
 //  given length and output length of array is same
 console.log("map() - it is used modify the array.");
@@ -37,6 +38,17 @@ a1.forEach((data)=>{
 })
 console.log(str);
 console.log("-----------------------------------------------------\n");
+
+// 18. every() - it checks all the element of array passes a given test or not.
+console.log("some() - it checks all the element of array passes a given test or not.");
+let arr2=[1,2,3,4,5]
+console.log("All the element of arr2 are greater than 0 ",arr2.every((data)=>{return data>0}))
+console.log("All the element of arr2 are greater than 3 ",arr2.every((data)=>{return data>3}))
+
+// 19. some () - checks if any of the value passes the given condition
+console.log("some() - checks if any of the value passes the given condition");
+let arr3=[1,2,3,4,5]
+console.log("some() - checks if any of the value passes the given condition",arr3.some((data)=>{return data}))
 // take input from user 5 and add it to array and use for each to display it 
 console.log("take input from user 5 and add it to array and use for each to display it ");
 
@@ -80,3 +92,4 @@ let res3 = (res1.reduce((acc,data)=>{
 })
 )
 console.log(res3)
+

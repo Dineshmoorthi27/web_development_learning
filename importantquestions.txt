@@ -1,0 +1,22 @@
+HTML
+1. structure of html
+2. all character formatting tags
+3. Explain tags and types
+4. Explain images, video,audio,marquee tags with syntax and attribute
+5. Explain creating hyper links in htm
+6. write about creating tables and syntax
+7. Explain all types of list with synatx nd attribute
+8. write and Explain all tages used in creating form.
+
+CSS
+1. Explain types of css with example
+2. what is box model? Explain
+3. what is opactity?
+4. what is selector ? Explain the types with syntax
+5. what is combinator? Explain the types with syntax
+6. Explain all pseudo class with synatx.
+7. Explain all pseudo Element 
+8. Explain all display properies.
+9. Explain all position properies.
+10. Explain tranform and transition properies.
+11. Explain animation properies completely.

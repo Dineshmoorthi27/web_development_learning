@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM - Browser Object Model</title>
+  </head>
+  <body>
+    <h1>location Object</h1>
+    <p id="href"></p>
+    <p id="hostName"></p>
+    <p id="pathName"></p>
+    <p id="protocol"></p>
+    <p id="port"></p>
+    <button value="" onclick="newDoc()">assign</button>
+    <p id="assign"></p>
+    <script>
+      // href
+      document.getElementById("href").innerHTML = "Page location : " + location.href;
+      // hostname
+      document.getElementById("hostName").innerHTML = "Page hostname : " + location.hostname;
+      // pathName
+      document.getElementById("pathName").innerHTML = "Page path : " + location.pathname;
+      // protocol
+      document.getElementById("protocol").innerHTML ="Page protocol : "  + location.protocol;
+      // port
+      document.getElementById("port").innerHTML = "Port number : " + window.location.port;
+      // assign
+      function newDoc(){
+        var newURL = "https://www.example.com";
+        location.assign(newURL);
+      }
+    </script>
+  </body>
+</html>
