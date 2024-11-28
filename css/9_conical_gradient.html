@@ -1,0 +1,29 @@
+<!-- 18/07 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conical-gradient</title>
+    <style>
+        div{
+            height:400px;
+            width:400px ;
+            margin:5px;
+            border-radius:50%;
+        }
+        .cg1{
+            background:conic-gradient(goldenrod,red,forestgreen,indigo);
+            display: inline-block;
+        }
+        .cg2{
+            background:conic-gradient(goldenrod 0deg 90deg,red 100deg 180deg,forestgreen 180deg 270deg,indigo 270deg);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="cg1"></div>
+    <div class="cg2"></div>
+</body>
+</html>

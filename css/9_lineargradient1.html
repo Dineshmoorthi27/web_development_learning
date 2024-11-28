@@ -1,0 +1,60 @@
+<!-- 17/7 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear-gradient 2 </title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        div{
+            height: 400px;
+            width: 600px;
+        } 
+        .lg1{
+            background-color: aqua;
+            background:linear-gradient(blue,magenta,rgb(16, 137, 16))
+        }
+        .lg2{
+            background:linear-gradient(to right,blue,magenta,rgb(17, 178, 17)) 
+             /* background:linear-gradient(to left,blue,magenta,rgb(17, 178, 17)) 
+             background:linear-gradient(to left top,blue,magenta,rgb(17, 178, 17))  */
+        } 
+        .lg3{
+            background-color: aqua; 
+            background:linear-gradient(to left,blue,magenta,rgb(16, 137, 16))
+        }
+        .lg4{ 
+            background-color: aqua; 
+            background:linear-gradient(to bottom,blue,magenta,rgb(16, 137, 16)) 
+        } 
+        .lg5{ 
+            background-color: aqua; 
+            background:linear-gradient(to left top,blue,magenta,rgb(16, 137, 16)) 
+
+         }
+        .lg6{
+            background-color: aqua; 
+            background:linear-gradient(100deg,blue,magenta,rgb(16, 137, 16)) 
+
+         }  
+    </style>
+</head>
+
+<body>
+    <div class="lg1"></div>
+    <div class="lg2"></div>
+    <div class="lg3"></div>
+    <div class="lg4"></div>
+    <div class="lg5"></div>
+    <div class="lg6"></div>
+    
+
+
+</body>
+
+</html>

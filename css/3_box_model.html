@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      .heading {
+        h1{
+          font-size: 5rem;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-transform: uppercase;
+        text-align: center;
+        }
+        font-size: 2rem;
+        border: 5px chartreuse solid;
+        
+        padding: 50px;
+        margin: 50px;
+      }
+      .padding {
+        padding: 50px;
+        /* padding-top: 50px; */
+        /* padding-right: 100px; */
+        /* padding-bottom: 150px;
+        padding-left: 200px;  */
+
+        /* padding: 30px 60px 100px 50px; */
+        /* padding: 100px 150px; */
+        /* padding: 200px; */
+        border: 3px brown solid;
+      }
+      .margin {
+        /* margin: 20px 50px 100px 150px; */
+        /* margin:100px 200px ; */
+        margin: 250px;
+        /* 
+            margin-top: 5px;
+            margin-right: 50px;
+            margin-bottom: 100px;
+            margin-left: 150px; */
+
+        /* margin-top: -100px  20px -5px 75px; */
+
+        
+        border: 3px brown solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>box model Contains</h1>
+      <p>padding in negative value is not possible</p>
+      <p>margin in negative value is  possible</p>
+    </div>
+    <hr />
+    <div class="padding">
+      <h1>padding</h1>
+      <p>padding-top</p>
+      <p>padding-bottom </p>
+      <p>padding-left</p>
+      <p>padding-right</p>
+      <p>if 4 value given = padding : top right bottom left</p>
+      <p>if 2 value given = padding : top&bottom left&right</p>
+      <p>if 1 value given = padding : all sides</p>
+    </div>
+    <hr />
+    <div class="margin">
+      <h1>margin - Window to border </h1>
+      <p>margin: auto -> exactly centre horizontal </p>
+      <p>margin-top</p>
+      <p>margin-bottom </p>
+      <p>margin-left</p>
+      <p>margin-right</p>
+      <p>if 4 value given = margin : top right bottom left</p>
+      <p>if 2 value given = margin : top&bottom left&right</p>
+      <p>if 1 value given = margin : all sides</p>
+    </div>
+  </body>
+</html>

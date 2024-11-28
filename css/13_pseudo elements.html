@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo element before and hover</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            text-transform: uppercase;
+            font-size: 11rem;
+            text-align: center;
+            color: aliceblue;
+        }
+        h1::before{
+            content: "";
+            height: 10px;
+            width: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%);
+            left: 50%;
+            transition: width 1s linear;
+            background-color: aliceblue;
+            border-radius: 100px;
+        }
+        h1:hover::before{
+            width: 850px; 
+        }   
+    </style>
+</head>
+<body>
+    <h1>Dinesh M </h1>
+</body>
+</html>

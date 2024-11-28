@@ -1,0 +1,46 @@
+<!-- 16/7 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>text-shadow</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000, #434343);
+            font-family: "Times New Roman", sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+        }
+        h1, h2 {
+            margin: 0;
+            text-transform: uppercase;
+            text-align: center;
+            background: linear-gradient(45deg, rgb(163, 163, 239), violet, rgb(144, 198, 205), gold);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* -webkit-text-stroke: 2px #000000; */
+            animation-delay: 0.75s;
+        }
+        h1 {
+            font-size: 10rem;
+        }
+        h2 {
+            font-size: 6rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="primary">Dinesh</h1>
+    <h2 id="secondary">Moorthi</h2>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!-- 25/7 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo_elements</title>
+    <style>
+        /* selection css starts here */
+         P::selection{
+            background-color: lime;
+            color:crimson;
+        }
+        ::selection{
+            color:blueviolet;
+            background-color: antiquewhite;
+        }
+        /* selection css end here */
+        /* placeholder css starts here */
+        input[type='text'] {
+            height: 40px;
+            /* width: 380px; */
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+        }
+
+        input[type='text']::placeholder {
+            color: sandybrown;
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+
+        .inputic {
+            border: 3px solid black;
+            width: 40%;
+        }
+
+        .inputic svg {
+            padding-left: 30px;
+        }
+
+        .inputic {
+            border-radius: 20px;
+        }
+
+        /* placeholders css end here */
+
+        .markers li::marker {
+            content: "🚘";
+        }
+
+        li {
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>selection </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt officiis in sapiente ullam optio
+        perspiciatis necessitatibus assumenda, maiores at et repudiandae unde inventore adipisci illo ducimus quas!
+        Molestiae, beatae! Ea quidem animi explicabo incidunt alias ratione dolorem praesentium esse, quae facilis quia
+        qui harum, perferendis nam ut distinctio nemo id fugiat debitis blanditiis a! Iste officiis fugit quisquam rem
+        labore! Doloremque, sunt cum! A animi eos soluta exercitationem labore, excepturi, facere corrupti doloribus
+        aspernatur commodi rem optio minima suscipit dicta, nemo itaque culpa reiciendis perspiciatis consectetur
+        possimus harum. Veritatis numquam ab alias rem officiis placeat ex itaque fugiat quam?</p>
+    <hr>
+
+    <h1>placeholder elements</h1>
+    <div class="inputic">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill"
+            viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg><input type="text" placeholder="username">
+    </div>
+
+
+    <hr>
+    <div class="markers">
+        <h1>Markers</h1>
+        <ul>
+            <li>tamil nadu</li>
+            <li>kerala</li>
+            <li>karanataka</li>
+            <li>goa</li>
+            <li>andra</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!-- 19/08 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid type 2</title>
+</head>
+<body>
+    <style>
+
+        *{
+            margin: 0;
+        }
+
+        .layout{
+            height: 100vh;
+            width: 100%;
+            background-color: grey;
+            display: grid;
+            grid-template-rows: 100px auto auto 150px;
+            grid-template-columns: 300px auto auto auto;
+            gap: 10px;
+            grid-template-areas: "nav nav nav nav" 
+                                "side content content content" 
+                                "side content content content" 
+                                "side bottom bottom bottom";
+        }
+
+        .layout .sections{
+            border: black solid;
+            font-size: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            box-shadow: 1px 1px 10px 5px black inset;
+        }
+
+        nav{
+            background-color: darkorange;
+            grid-area: nav;
+        }
+
+        aside{
+            background-color: aqua;
+            grid-area: side;
+        }
+
+        article{
+            background-color: rebeccapurple;
+            grid-area: content;
+        }
+
+        footer{
+            background-color: lightgoldenrodyellow;
+            grid-area: bottom;
+        }
+
+    </style>
+
+    <div class="layout">
+        <nav class="sections">Navigation</nav>
+        <aside class="sections">Side Menu</aside>
+        <article class="sections">Main Content</article>
+        <footer class="sections">Footer</footer>
+    </div>
+
+</body>
+</html>

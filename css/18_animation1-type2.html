@@ -1,0 +1,52 @@
+<!-- 9/8 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation1-type2</title>
+    <style>
+        .box{
+            height: 180px;
+            width: 180px;
+            background-color: darkcyan;
+            box-shadow: 1px 1px 5px 10px black inset;
+            border-radius: 20px;
+            position: absolute;
+            animation: move 4s ease-in-out forwards;
+        }
+        @keyframes move {
+            0%,100%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left: 1355px;
+                transform: rotate(360deg);
+                background-color: aqua;
+                border-radius: 50%;
+            }
+            50%{
+                top: 555px;
+                left: 1355px;
+                background-color: rgb(7, 207, 141);
+            }
+            75%{
+                top: 555px;
+                left: 0;
+                background-color: mediumpurple;
+                border-radius: 30px;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

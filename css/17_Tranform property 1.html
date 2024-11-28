@@ -1,0 +1,39 @@
+<!-- 05/08 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tranform property rotate</title>
+    <style>
+      div{
+        height: 400px;
+        width: 400px;
+        /*background-color: gainsboro;*/
+        margin: 150px auto auto;
+        border-radius: 50%;
+        /*border-radius: 30px 100px/100px 50px;*/
+        border: 5px solid transparent;
+        border-right-color: red;
+        border-left-color: violet;
+        animation: rotate 1s linear infinite;
+        outline: 3px green solid;
+        outline-offset: 10px;
+      }
+
+      @keyframes rotate {
+        from{
+          transform: rotate(0deg);
+        }
+        to{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+</head>
+<body>
+  <div> </div>
+</body>
+</html>

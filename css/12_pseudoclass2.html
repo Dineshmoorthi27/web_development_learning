@@ -1,0 +1,121 @@
+<!-- 23/7 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo_class 2</title>
+    <style>
+        .heading{
+            color: rgb(232, 178, 18);
+            font-size: 4rem;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase
+        }
+      input {
+        height: 40px;
+        width: 30%;
+        width: 2.8%;
+        font-size: 30px;
+        border-radius: 20px;
+      }
+      input:focus {
+        border-radius: 20px;
+        background-color: rgb(249, 219, 192);
+        outline: none;
+        color: brown;
+        width: 350px;
+      }
+      .firstchild h1:first-child {
+        color: rgb(179, 235, 179);
+        font-size: 3rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .firstchild h1:last-child {
+        background-color: black;
+        color: white;
+        font-size: 3rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .firstchild h1:nth-child(5) {
+        color: brown;
+        font-size: 3rem;
+        -webkit-text-stroke: 2px blue;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .even p,
+      .even h1,
+      .even h2 {
+        color: rgb(89, 87, 72);
+        
+      }
+
+      .even :not(p, h1, h2) {
+        color: blueviolet;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">on focus</div>
+    <input type="text" name="" id="" />
+    <hr />
+    <div class="heading">this is example of first-child last-child nth-child</div>
+    <div class="firstchild">
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        praesentium.
+      </h1>
+    </div>
+
+    <hr />
+    <div class="heading">this is the example of nth-child(even or odd and not)</div>
+    <div class="even">
+      <h1>This is first line</h1>
+      <p>This is paragraph</p>
+      <h2>This is third line</h2>
+      <p>This is paragraph</p>
+      <div>This is div</div>
+      <p>Thi sis paragraph</p>
+      <h1>This is last line</h1>
+    </div>
+  </body>
+</html>

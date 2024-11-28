@@ -1,0 +1,72 @@
+<!-- 24/7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-element</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            font-size: 6rem;
+            color: white;
+            text-align: center;
+        }
+        h1::first-letter{
+            font-size: 10rem;
+            text-transform: uppercase;
+            color: brown;
+            font-family: Cambria, 'Cochin', Georgia, Times, Times New Roman, serif;
+        }
+        .first{
+            color: azure;
+            p{
+                font-size: 1rem;
+            }
+        }
+        p{
+            color: white;
+            font-size: 3rem;
+        }
+        .first::first-line{
+            color: aquamarine;
+            background-color: bisque;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h2{
+            font-size: 10rem;
+            color: lightgreen;
+            text-align: center;
+        }
+        h2::before{
+            content:"Py";
+            color: #ff8733;
+            font-size: 12rem;
+        }
+        h2::after{
+            content: "😍";
+            /* color: transparent; */
+        }
+    </style>
+</head>
+<body>
+    <!-- Example of first-letter  -->
+     <p>Example of first-letter</p>
+    <h1>Pyspider</h1>
+
+    <hr>
+    <!-- Example of first-line -->
+    <p>Example of first-line</p>
+    <div class="first">
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, sunt! Obcaecati, veritatis dignissimos blanditiis facilis error libero ex odio quas? Exercitationem eum tempora, perspiciatis laboriosam omnis cum nobis illo iure eos, iusto similique officiis, facere ex nulla rerum hic! Laborum neque quibusdam aut dolorem accusamus sapiente! Sed eos ad laudantium quam esse reiciendis tempore magni nam. Quibusdam, sunt odit distinctio maxime asperiores laborum incidunt labore corporis saepe ipsa assumenda voluptas quisquam dolorum? Optio quia, distinctio dicta rerum repellendus odio accusamus quae labore magni totam modi error, illum vitae unde facilis ex nam quas inventore blanditiis eos, dolor in commodi! Molestiae! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ut doloribus totam fugiat voluptatibus temporibus, cumque veniam praesentium dolorem, doloremque in velit. Exercitationem aperiam dolorum voluptatibus doloribus at dolore quas dicta voluptates reiciendis unde provident minus ex esse harum odit quam qui facilis assumenda id numquam, voluptas cum! Corporis, dicta.</p> 
+    </div>
+    <hr>
+    <p>Example of before and after</p>
+
+    <h2>spiders</h2>
+</body>
+</html>

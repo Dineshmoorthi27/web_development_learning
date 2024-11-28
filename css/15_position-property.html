@@ -1,0 +1,99 @@
+<!-- 31/07 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        .main{
+            background-color: aquamarine;
+            height: 80vh;
+            width: 80%;
+            flex-direction: row;
+            gap:30px ;
+        }
+        .box{
+            height: 200px;
+            width:200px ;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px 10px rgb(101, 101, 101) inset;
+            color: white;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-1{
+            background-color: rgb(224, 197, 130);
+        }
+        .item-2{
+            background-color: rgb(214, 148, 240);
+            position: sticky;
+            top: 150px;
+        }
+        .item-3{
+            background-color: rgb(126, 216, 241);
+            /*Position-Absolute*/
+            position: absolute;
+            /* top: 100px;
+            left: 400px; 
+            top: 0;
+            right: 0; 
+            bottom: 0;
+            right: 0;  */
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        } 
+         
+        .item-4{
+            background-color: rgb(150, 237, 115);
+            position: relative;
+            /* top: 300px;
+            left: 200px; */
+            /* top: 50%;
+            left: 50%; */
+            position: fixed;
+            /* bottom: 0;
+            right: 0; */
+            top: 50%;
+            left: 83%;
+        }
+        .two{
+            background-color: rgb(183, 103, 194);
+            height: 700px;
+            width: 100%;
+        
+        }
+        .three{
+            background-color: rgb(151, 90, 226);
+            height: 700px;
+            width: 100%;
+        }
+       
+       
+      
+    </style>
+</head>
+<body>
+   <div class="main">
+    <div class="box item-1">1</div>
+    <div class="box item-2">2</div>
+    <div class="box item-3">3</div>
+    <div class="box item-4">4</div>
+   </div>
+   <div class="two"></div>
+   <div class="three"></div>
+   
+        
+</body>
+</html>

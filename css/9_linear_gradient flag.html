@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flag</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .flag{
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(rgb(209, 141, 13), white 250px 500px, rgb(28, 152, 28))
+        }
+        .chakra{
+            height: 250px;
+            width: 250px; 
+            position: absolute;
+            /* background-image: url('https://media.istockphoto.com/id/1093154950/vector/the-wheel-symbol-on-the-india-flag-is-dharmachakra-ashoka-chakra-wheel-of-law-ancient-indian.jpg?s=612x612&w=0&k=20&c=9473bWMjLoQDgq1Mo3WSTiKHY0GV5Ud0TwwnlEffsCI='); */
+            animation: rotate 4s linear infinite;
+            left: 40%;
+            top: 35%;
+            margin: auto;
+            
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="flag"><img src="https://i.pinimg.com/originals/1a/5e/f9/1a5ef90d510e1e484246dbb6161abd26.png" class="chakra" ></div>
+    
+</body>
+</html>
+

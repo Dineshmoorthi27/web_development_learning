@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators child selector</title>
+    <style>
+        .grand-parent>h1,h2{
+            color: brown;
+        }
+        .parent>h1{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand-parent">
+        <h1>This is h1 direct child to grand-parent</h1>
+        <h2>This is h2 direct child to grand-parent</h2>
+        <p>This is p direct child to grand-parent</p>
+        <div class="parent">
+           <h1>This is h1 direct child to parent</h1>
+           <h2>This is h2 direct child to parent</h2>
+           <p>This is p direct child to parent</p>
+        </div>
+          
+    </div>
+    <h1>This is h1 direct child to grand-parent</h1>
+</body>
+</html>

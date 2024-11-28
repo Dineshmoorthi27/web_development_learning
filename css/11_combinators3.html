@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjucent sibling Selector and general sibling selector</title>
+    <style>
+        
+        
+         p+h4{
+            color: aqua;
+            text-shadow: 3px 3px 3px black;
+            font-size: 4rem;
+        }
+         
+         p~h1{
+            color: rgb(193, 76, 144);
+            font-size: 5rem;
+         }
+         h2~p{
+            color: rgb(123, 70, 70);
+            font-size: 6rem;
+         }
+    </style>
+</head>
+<body>
+    <h1>This is child 1</h1>
+    <h2>This is child 2</h2>
+    <p>This is child 3</p>
+    <h4>This is child 4</h4>
+    <div>This is child 5</div>
+    <h1>This is child 6</h1>
+    <p>This is child 7</p>
+    <h4>This is child 8</h4>
+</body>
+</html>

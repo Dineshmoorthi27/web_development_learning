@@ -1,0 +1,37 @@
+<!-- 2/08 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(214, 197, 153);
+            border: 4px rgb(162, 161, 163) solid;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box:hover{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(191, 245, 191);
+            border-radius:50px ;
+            border: 6px rgb(131, 131, 154) solid;
+            /* transition-property: height; */
+            /* transition-property: width;
+            transition-property: background-color; */
+            /* transition-property: border; */
+            transition-property: border-radius;
+            transition-duration: 6s;
+            transition-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
